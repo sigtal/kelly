@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+    <title>button</title>
+    <style>
+      @import url('https@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=MuseoModerno:wght@900&display=swap');://fonts.googleapis.com/css2?family=MuseoModerno:wght@900&display=swap');
+      body {
+        margin: 0;
+        padding: 0;
+        position:relative;
+      }
+      .head{
+        padding: 50px 0;
+        width:100%;
+      }
+      .menu{
+        position: relative;
+        display: inline-block;
+        padding: 30px 60px;
+        color: black;
+        letter-spacing: 4px;
+        text-decoration: none;
+        font-size; 50px;
+        overflow: hidden;
+        transition: 0.2s;
+        margin: 0 20px;
+        font-family: 'Indie Flower', cursive;
+        cursor: pointer;
+      }
+      .menu:hover{
+        color: white;
+        background: black;
+        transition-delay: 1s;
+      }
+      .menu span{
+        position: absolute;
+        display: block;
+      }
+      .border1{
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg,transparent,black);
+      }
+      .menu:hover .border1{
+        left: 100%;
+        transition: 1s;
+      }
+      .menu span:nth-child(2){
+        top: -100%;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg,transparent,black);
+      }
+      .menu:hover span:nth-child(2){
+        top: 100%;
+        transition: 1s;
+        transition-delay:0.25s
+      }
+      .menu span:nth-child(3){
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(270deg,transparent,black);
+      }
+      .menu:hover span:nth-child(3){
+        right: 100%;
+        transition: 1s;
+        transition-delay:0.5s
+      }
+      .menu span:nth-child(4){
+        bottom: -100%;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(360deg,transparent,black);
+      }
+      .menu:hover span:nth-child(4){
+        bottom: 100%;
+        transition: 1s;
+        transition-delay:0.75s
+      }
+
+      .container{
+        user-select: none;
+        position:absolute
+      }
+
+
+      .background{
+        padding:0;
+        margin:0;
+        font-weight: bold;
+        float:left;
+        color: transparent;
+        -webkit-background-clip:text;
+        width: 20%;
+        text-align:center;
+        font-size:3000%;
+        cursor:default;
+        opacity:0.5;
+        font-family: 'MuseoModerno', cursive;
+
+
+      }
+      .background:nth-child(1){
+        background-image: url("星.jpg");
+        background-size:338px 600px;
+        background-position:60% 90%;
+
+      }
+      .background:nth-child(2){
+        background-image: url("新年.jpg");
+        background-size:849px 1200px;
+        background-position:50% 10%;
+
+      }
+      .background:nth-child(3){
+        background-image: url("illusthead.jpg");
+        background-size:600px 600px;
+        background-position:50% 90%;
+      }
+      .background:nth-child(4){
+        background-image: url("世界を革命する力を.jpg");
+        background-size:764px 795px;
+        background-position:44% 20%;
+
+      }
+      .background:nth-child(5){
+        background-image: url("明けましておめでとうございます。.jpg");
+        background-size:1200px 800px;
+        background-position:30% -20%;
+      }
+      .top-wrapper{
+        padding-top:100px;
+        opacity:0.7;
+        display:block;
+        position: relative;
+        padding: 0px 100px;
+        font-family: 'Indie Flower', cursive;
+      }
+      .top-wrapper h2,.illust h1,.mail h1 {
+        opacity: 0.7;
+        font-size: 45px;
+        letter-spacing: 5px;
+
+      }
+
+      .btn{
+        padding: 8px 24px;
+        color: white;
+        display: inline-block;
+        opacity: 0.8;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 30px;
+
+      }
+      .btn:hover {
+        opacity: 1;
+      }
+
+      .fa{
+         margin-right:5px;
+      }
+      .signup {
+        background-color:black ;
+      }
+
+      .pixiv {
+        background-color: black;
+        margin-right: 10px;
+      }
+
+      .twitter {
+        background-color: black;
+      }
+      .pixiv-icon{
+        height:30px;
+
+      }
+      .background-image{
+        float:right;
+        position:fixed;
+        bottom:0;
+        right:0;
+        z-index: -20;
+      }
+      .illust{
+        margin-top:800px;
+        width:100%;
+      }
+      .illust h1{
+        font-family: 'Indie Flower', cursive;
+        padding: 0px 100px;
+        opacity: 0.49;
+
+      }
+      .illust-container{
+        width:20%;
+        float:left;
+
+      }
+      .illust-content{
+        height:300px;
+      }
+      .content{
+        border: 10px rgba(0,0,0,0.7) solid;
+        border-radius: 20px;
+        margin: 0 20px;
+          width: 100%;
+           height: 100%;
+           overflow: hidden;
+width: 200px;/* トリミングしたい枠の幅 */
+height: 200px;/* トリミングしたい枠の高さ */
+position: relative;
+cursor:pointer;
+
+      }
+      .content p{
+
+      }
+
+      .content img{
+
+        position: absolute;
+         top: 50%;
+         left: 50%;
+         -webkit-transform: translate(-50%, -50%);
+         -ms-transform: translate(-50%, -50%);
+         transform: translate(-50%, -50%);
+      }
+      .reload{
+        opacity:0.7;
+        width:100%;
+        height:200px;
+        text-align:center;
+      }
+      .reload a{
+        padding: 30px 60px;
+        color: white;
+        display: inline-block;
+        opacity: 0.8;
+        border-radius: 4px;
+        text-decoration: none;
+        background-color:black;
+        font-family: 'Indie Flower', cursive;
+        font-size:30px;
+      }
+      .reload a:hover {
+        opacity: 1;
+      }
+      .clear{
+        clear:left;
+      }
+      .mail{
+        font-family: 'Indie Flower', cursive;
+        height: 130vh;
+      }
+      .mail h1{
+        font-family: 'Indie Flower', cursive;
+        padding: 0px 100px;
+        opacity: 0.49;
+      }
+      .mail p{
+        font-size: 30px;
+        opacity: 0.49;
+      }
+      .mail_wrapper{
+        padding: 0 150px;
+      }
+      .labelegal_entity{
+        display: none;
+      }
+      .individual{
+        display: none;
+      }
+      .labelegal_entity,.individual{
+        padding-left:100px;
+      }
+      .individual a{
+        background-color: black;
+        opacity: 0.56;
+      }
+      input[type=radio]{
+  position: absolute;
+  visibility: hidden;
+}
+      .japanFont{
+         font-family: "M PLUS Rounded 1c";
+      }
+      .label{
+        text-align:center;
+      }
+      #corporate[type=radio]:checked ~ .label1{
+        background-color: black;
+        color: white;
+      }
+      #personal[type=radio]:checked ~ .label2{
+        background-color: black;
+        color: white;
+      }
+      .input,.textarea{
+        font-size:25px;
+        color: white;
+        background-color: black;
+        border: 10px rgba(0,0,0,0.7) solid;
+        border-radius: 20px;
+        opacity: 0.56;
+
+      }
+      .yen{
+        display: inline;
+      }
+
+
+      .copy-text{
+        font-family: 'Indie Flower', cursive;
+
+      }
+      .menuFontSize{
+        font-size: 30px;
+      }
+      .topScroll{
+        position: fixed;
+        bottom:30px;
+        right:30px;
+        background-color:black;
+        padding:10px 15px;
+        border-radius: 20px;
+        opacity:0.56;
+        cursor: pointer;
+        display: none;
+      }
+      .topScroll:hover{
+        opacity:0.8;
+      }
+      .fas{
+        font-size: 100px;
+        color:white;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="head" id="head">
+
+    <!-- <a href="#" class="menu smoothScroll menuFontSize">
+      <span class="border1"></span>
+      <span class="border2"></span>
+      <span class="border3"></span>
+      <span class="border4"></span>
+      Home
+    </a> -->
+    <a href="#illust" class="menu smoothScroll menuFontSize">
+      <span class="border1"></span>
+      <span class="border2"></span>
+      <span class="border3"></span>
+      <span class="border4"></span>
+      Illust
+    </a>
+    <!-- <a href="#" class="menu smoothScroll menuFontSize">
+      <span class="border1"></span>
+      <span class="border2"></span>
+      <span class="border3"></span>
+      <span class="border4"></span>
+
+    </a> -->
+    <a href="#contact" class="menu smoothScroll menuFontSize">
+      <span class="border1"></span>
+      <span class="border2"></span>
+      <span class="border3"></span>
+      <span class="border4"></span>
+      Contact
+    </a>
+  </div>
+
+    <div class="container">
+        <p class="background">K</p>
+        <p class="background">E</p>
+        <p class="background">L</p>
+        <p class="background">L</p>
+        <p class="background">Y</p>
+    </div>
+    <img src="桜の季節.jpg" alt="" class="background-image">
+
+    <div class="top-wrapper">
+      <div class="container">
+        <h2>about</h2>
+        <a href="#contact" class="btn signup smoothScroll">Contact Form </a>
+        <p>Please SHARE this article.</p>
+        <a href="https://www.pixiv.net/users/5393987" class="btn pixiv" target="_blank"><img class="pixiv-icon" src="https://cdn.discordapp.com/attachments/679267726933491727/694441893962186752/logo.b4908c7.png" alt="">Pixiv</a>
+        <a href="https://twitter.com/kelly_dog_cat" class="btn twitter" target="_blank"><span class="fab fa-twitter"></span>Twitter</a>
+      </div>
+    </div>
+    <div class="illust" id="illust">
+      <h1>illust</h1>
+      <div class="illust-container">
+        <div class="illust-content">
+          <div class="content">
+            <p></p>
+              <img src="test.jpg" alt="">
+
+            </div>
+          </div>
+        </div>
+      <div class="illust-container">
+        <div class="illust-content">
+          <div class="content">
+            <p></p>
+            <img src="新年.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="illust-container">
+        <div class="illust-content">
+          <div class="content">
+            <p></p>
+            <img src="test.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="illust-container">
+        <div class="illust-content">
+          <div class="content">
+            <p></p>
+            <img src="test.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="illust-container">
+        <div class="illust-content">
+          <div class="content">
+            <p></p>
+            <img src="test.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="illust-container">
+        <div class="illust-content">
+          <div class="content">
+            <p></p>
+            <img src="test.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="illust-container">
+        <div class="illust-content">
+          <div class="content">
+            <p></p>
+            <img src="test.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="illust-container">
+        <div class="illust-content">
+          <div class="content">
+            <p></p>
+            <img src="test.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="illust-container">
+        <div class="illust-content">
+          <div class="content">
+            <p></p>
+            <img src="test.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="illust-container">
+        <div class="illust-content">
+          <div class="content">
+            <p></p>
+            <img src="test.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="illust-container">
+        <div class="illust-content">
+          <div class="content">
+            <p></p>
+            <img src="test.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="illust-container">
+        <div class="illust-content">
+          <div class="content">
+            <p></p>
+            <img src="test.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="clear">
+
+      </div>
+    </div>
+    <div class="reload">
+      <a href="#" >More</a>
+    </div>
+    <div class="mail" id="contact">
+      <h1>Contact</h1>
+      <div class="mail_wrapper">
+        <p>Usage</p>
+        <input type="radio" name="usage" value="labelegal_entity" onclick="entryChange();" id="corporate"><label for="corporate" class="menu label1">
+          <span class="border1"></span>
+          <span class="border2"></span>
+          <span class="border3"></span>
+          <span class="border4"></span>
+          Corporate use<span class="japanFont">&nbsp;&nbsp;（法人利用）</span></label>
+        <input type="radio" name="usage" value="individual" onclick="entryChange();" id="personal"><label for="personal" class="menu label2">
+          <span class="border1"></span>
+          <span class="border2"></span>
+          <span class="border3"></span>
+          <span class="border4"></span>
+          Personal use <span class="japanFont">&nbsp;&nbsp;（個人利用）</span></label>
+        <div class="labelegal_entity" id="labelegal_entity">
+          <form method="post" action="" >
+            <p>Your Email Address<span class="japanFont">（連絡先メールアドレス）</span></p>
+            <input type="email" class="input" name="" value="" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="kelly@example.com">
+            <p>Budget<span class="japanFont">（予算）</span></p>
+            <input type="text" class="input" name="" value="" required pattern="[1-9][0-9]*"><p class="yen">Japanese Yen</p>
+            <p>Content<span class="japanFont">（依頼内容）</span></p>
+            <textarea class="textarea" name="message" rows="8" cols="80" required></textarea><br />
+            <a href="#" class="menu menuFontSize" name="submit">
+              <span class="border1"></span>
+              <span class="border2"></span>
+              <span class="border3"></span>
+              <span class="border4"></span>
+              Send
+            </a>
+          </form>
+        </div>
+        <div class="individual" id="individual">
+          <p>Please copy the content below</p>
+          <p class="japanFont">1.以下の内容をコピーしてください</p>
+          <textarea name="name" class="textarea copy-text" id="copyTarget" readonly rows="4" cols="45">Your Email Address（連絡先メールアドレス）:
+Content（依頼内容）:
+</textarea><br/>
+          <label onclick="copyToClipboard()" class="menu">
+            <span class="border1"></span>
+            <span class="border2"></span>
+            <span class="border3"></span>
+            <span class="border4"></span>
+            Copy Content<span class="japanFont">&nbsp;（コピーする）</span>
+          </label>
+          <p id="alert"></p>
+          <p>When the copy is completed,<br/>please access the following site and fill in the copied template and request.</p>
+          <p class="japanFont">2.コピーが完了したら下記サイトにアクセスしていただきコピーしたテンプレートを埋めてご依頼ください</p>
+          <a href="https://skeb.jp/@kelly_dog_cat" target="_blank" class="btn skeb">Request Page(Skeb)</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="topScroll" id="topScroll">
+      <span class="fas fa-arrow-up"></span>
+    </div>
+    <script type="text/javascript">
+    document.addEventListener("click", e => {
+      const target = e.target;
+      // clickした要素がclass属性、js-smooth-scrollを含まない場合は処理を中断
+      if (!target.classList.contains("smoothScroll")) return;
+      e.preventDefault();
+      const targetId = target.hash;
+      document.querySelector(targetId).scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    });
+    function entryChange() {
+       var radio = document.getElementsByName("usage");
+       if (radio[0].checked) {
+         document.getElementById("labelegal_entity").style.display = "block";
+         document.getElementById("individual").style.display = "none";
+       }else if(radio[1].checked) {
+         document.getElementById("individual").style.display = "block";
+         document.getElementById("labelegal_entity").style.display = "none";
+       };
+    };
+    window.onload = entryChange;
+
+    function copyToClipboard(){
+      var copyTarget = document.getElementById("copyTarget");
+      copyTarget.select();
+      document.execCommand("Copy");
+      var alert = document.getElementById("alert");
+      alert.innerHTML = "Copied<span class='japanFont'>（コピーしました）</span>"
+    };
+    var element = document.getElementById( "head" ) ;
+
+document.getElementById( "topScroll" ).onclick = function () {
+	element.scrollIntoView( {
+    behavior: "smooth",
+    block: "start"
+  });
+};
+var px_change = 600;
+// スクロールのイベントハンドラを登録
+window.addEventListener('scroll', function(e) {
+	// 変化するポイントまでスクロールしたらクラスを追加
+	var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+	if ( scrollTop > px_change ) {
+		document.getElementById( "topScroll" ).style.display = "block";
+
+	// 変化するポイント以前であればクラスを削除
+	} else {
+		document.getElementById( "topScroll" ).style.display = "none";
+	}
+});
+    </script>
+  </body>
+</html>
