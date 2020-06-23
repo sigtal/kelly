@@ -1,26 +1,54 @@
+<!-- メールフォーム -->
 <div class="mail" id="contact">
   <h1>Contact</h1>
   <div class="mail_wrapper">
+    <!-- 依頼方法選択 -->
     <p>Usage</p>
-    <input type="radio" name="usage" value="labelegal_entity" id="corporate"><label for="corporate" class="menu label1">
-      <span class="border1"></span>
-      <span class="border2"></span>
-      <span class="border3"></span>
-      <span class="border4"></span>
-      Corporate use<span class="japanFont">&nbsp;&nbsp;（法人利用）</span></label>
-    <input type="radio" name="usage" value="individual" id="personal"><label for="personal" class="menu label2">
-      <span class="border1"></span>
-      <span class="border2"></span>
-      <span class="border3"></span>
-      <span class="border4"></span>
-      Personal use <span class="japanFont">&nbsp;&nbsp;（個人利用）</span></label>
+    <input type="radio" name="usage" value="labelegal_entity" id="corporate">
+      <label for="corporate" class="menu label1">
+        <span class="border1"></span>
+        <span class="border2"></span>
+        <span class="border3"></span>
+        <span class="border4"></span>
+        Corporate use
+        <span class="japanFont">
+          &nbsp;&nbsp;（法人利用）
+        </span>
+      </label>
+    <input type="radio" name="usage" value="individual" id="personal">
+      <label for="personal" class="menu label2">
+        <span class="border1"></span>
+        <span class="border2"></span>
+        <span class="border3"></span>
+        <span class="border4"></span>
+        Personal use
+        <span class="japanFont">
+          &nbsp;&nbsp;（個人利用）
+        </span>
+      </label>
+    <!-- 法人向け依頼方法 -->
     <div class="labelegal_entity" id="labelegal_entity">
       <form method="post" action="" >
-        <p>Your Email Address<span class="japanFont">（連絡先メールアドレス）</span></p>
+        <p>Your Email Address
+          <span class="japanFont">
+            （連絡先メールアドレス）
+          </span>
+        </p>
         <input type="email" class="input" name="" value="" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="kelly@example.com">
-        <p>Budget<span class="japanFont">（予算）</span></p>
-        <input type="text" class="input" name="" value="" required pattern="[1-9][0-9]*"><p class="yen">Japanese Yen</p>
-        <p>Content<span class="japanFont">（依頼内容）</span></p>
+        <p>Budget
+          <span class="japanFont">
+            （予算）
+          </span>
+        </p>
+        <input type="text" class="input" name="" value="" required pattern="[1-9][0-9]*">
+        <p class="yen">
+          Japanese Yen
+        </p>
+        <p>Content
+          <span class="japanFont">
+            （依頼内容）
+          </span>
+        </p>
         <textarea class="textarea" name="message" rows="8" cols="80" required></textarea><br />
         <a href="#" class="menu menuFontSize" name="submit">
           <span class="border1"></span>
@@ -31,24 +59,28 @@
         </a>
       </form>
     </div>
+    <!-- 個人向け依頼方法     -->
     <div class="individual" id="individual">
       <p>Please copy the content below</p>
       <p class="japanFont">1.以下の内容をコピーしてください</p>
-      <textarea name="name" class="textarea copy-text" id="copyTarget" readonly rows="4" cols="45">Your Email Address（連絡先メールアドレス）:
-Content（依頼内容）:
-</textarea><br/>
+      <textarea name="name" class="textarea copy-text" id="copyTarget" readonly rows="4" cols="45">Your Email Address（連絡先メールアドレス）:&#13Content（依頼内容）:
+      </textarea><br/>
       <label class="menu" id="copyTrigger">
         <span class="border1"></span>
         <span class="border2"></span>
         <span class="border3"></span>
         <span class="border4"></span>
-        Copy Content<span class="japanFont">&nbsp;（コピーする）</span>
+        Copy Content
+        <span class="japanFont">
+          &nbsp;（コピーする）
+        </span>
       </label>
       <p id="alert"></p>
-      <p>When the copy is completed,<br/>please access the following site and fill in the copied template and request.</p>
+      <p>When the copy is completed,
+        <br/>please access the following site and fill in the copied template and request.
+      </p>
       <p class="japanFont">2.コピーが完了したら下記サイトにアクセスしていただきコピーしたテンプレートを埋めてご依頼ください</p>
       <a href="https://skeb.jp/@kelly_dog_cat" target="_blank" class="btn skeb">Request Page(Skeb)</a>
-
     </div>
   </div>
 </div>

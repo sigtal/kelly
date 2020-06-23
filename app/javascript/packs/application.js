@@ -15,6 +15,6 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+require("packs/button")
 require("packs/pageScroll")
 require("packs/topToScroll")
-require("packs/contact")
