@@ -1,0 +1,60 @@
+.mail{
+  font-family: 'Indie Flower', cursive;
+  height: 130vh;
+}
+.mail h1{
+  font-family: 'Indie Flower', cursive;
+  padding: 0px 100px;
+  opacity: 0.49;
+}
+.mail p{
+  font-size: 30px;
+  opacity: 0.49;
+}
+.mail_wrapper{
+  padding: 0 150px;
+}
+.labelegal_entity{
+  display: none;
+}
+.individual{
+  display: none;
+}
+.labelegal_entity,.individual{
+  padding-left:100px;
+}
+.individual a{
+  background-color: black;
+  opacity: 0.56;
+}
+input[type=radio]{
+position: absolute;
+visibility: hidden;
+}
+.japanFont{
+   font-family: "M PLUS Rounded 1c";
+}
+.label{
+  text-align:center;
+}
+#corporate[type=radio]:checked ~ .label1{
+  background-color: black;
+  color: white;
+}
+#personal[type=radio]:checked ~ .label2{
+  background-color: black;
+  color: white;
+}
+.input,.textarea{
+  font-size:25px;
+  color: white;
+  background-color: black;
+  border: 10px rgba(0,0,0,0.7) solid;
+  border-radius: 20px;
+  opacity: 0.56;
+
+}
+.copy-text{
+  font-family: 'Indie Flower', cursive;
+
+}

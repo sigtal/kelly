@@ -13,3 +13,135 @@
  *= require_tree .
  *= require_self
  */
+
+@import url('https@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=MuseoModerno:wght@900&display=swap');://fonts.googleapis.com/css2?family=MuseoModerno:wght@900&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+}
+.head{
+  padding: 50px 0;
+  width:100%;
+}
+.menu{
+  position: relative;
+  display: inline-block;
+  padding: 30px 60px;
+  color: black;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size; 50px;
+  overflow: hidden;
+  transition: 0.2s;
+  margin: 0 20px;
+  font-family: 'Indie Flower', cursive;
+  cursor: pointer;
+}
+.menu:hover{
+  color: white;
+  background: black;
+  transition-delay: 1s;
+}
+.menu span{
+  position: absolute;
+  display: block;
+}
+.border1{
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,black);
+}
+.menu:hover .border1{
+  left: 100%;
+  transition: 1s;
+}
+.menu span:nth-child(2){
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,black);
+}
+.menu:hover span:nth-child(2){
+  top: 100%;
+  transition: 1s;
+  transition-delay:0.25s
+}
+.menu span:nth-child(3){
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,black);
+}
+.menu:hover span:nth-child(3){
+  right: 100%;
+  transition: 1s;
+  transition-delay:0.5s
+}
+.menu span:nth-child(4){
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,black);
+}
+.menu:hover span:nth-child(4){
+  bottom: 100%;
+  transition: 1s;
+  transition-delay:0.75s
+}
+
+
+.btn{
+  padding: 8px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 30px;
+
+}
+.btn:hover {
+  opacity: 1;
+}
+
+
+.background-image{
+  float:right;
+  position:fixed;
+  bottom:0;
+  right:0;
+  z-index: -20;
+}
+
+.yen{
+  display: inline;
+}
+
+
+
+.menuFontSize{
+  font-size: 30px;
+}
+.topScroll{
+  position: fixed;
+  bottom:30px;
+  right:30px;
+  background-color:black;
+  padding:10px 15px;
+  border-radius: 20px;
+  opacity:0.56;
+  cursor: pointer;
+  display: none;
+}
+.topScroll:hover{
+  opacity:0.8;
+}
+.fas{
+  font-size: 100px;
+  color:white;
+}
