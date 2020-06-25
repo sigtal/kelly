@@ -28,19 +28,27 @@
       </label>
     <!-- 法人向け依頼方法 -->
     <div class="labelegal_entity" id="labelegal_entity">
-      <form method="post" action="" >
+
+      <%= form_with model: @contact,url: { action: "contact" },local: 'true' do |form| %>
+        <% if @contact.errors.any? %>
+          <% @contact.errors.full_messages.each do |message| %>
+            <li>
+              <%=  message %>
+            </li>
+          <% end %>
+        <% end %>
         <p>Your Email Address
           <span class="japanFont">
             （連絡先メールアドレス）
           </span>
         </p>
-        <input type="email" class="input" name="" value="" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="kelly@example.com">
+        <%= form.text_field :email, class: :input, :placeholder => "kelly@example.com" %>
         <p>Budget
           <span class="japanFont">
             （予算）
           </span>
         </p>
-        <input type="text" class="input" name="" value="" required pattern="[1-9][0-9]*">
+        <%= form.text_field :budget, class: :input %>
         <p class="yen">
           Japanese Yen
         </p>
@@ -49,16 +57,17 @@
             （依頼内容）
           </span>
         </p>
-        <textarea class="textarea" name="message" rows="8" cols="80" required></textarea><br />
-        <a href="#" class="menu menuFontSize" name="submit">
+        <%= form.text_area :content, class: :textarea,cols: 80, rows: 8  %>
+        <button type="submit" class="menu menuFontSize send">
           <span class="border1"></span>
           <span class="border2"></span>
           <span class="border3"></span>
           <span class="border4"></span>
-          Send
-        </a>
-      </form>
+          send
+        </button>
+      <% end %>
     </div>
+
     <!-- 個人向け依頼方法     -->
     <div class="individual" id="individual">
       <p>Please copy the content below</p>
