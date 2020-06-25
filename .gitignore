@@ -42,4 +42,6 @@ yarn-debug.log*
 
 
 /config/environments/development.rb
+/config/environments/production.rb
 /app/mailers/contact_mailer.rb
+/.env
