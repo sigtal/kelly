@@ -41,5 +41,5 @@ yarn-debug.log*
 .yarn-integrity
 
 
-/config/environments/
+config/environments/development.rb
 app/mailers/contact_mailer.rb
