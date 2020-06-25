@@ -61,8 +61,8 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "kelly_production"
 
   config.action_mailer.perform_caching = false
-
-  config.action_mailer.default_url_options = { :host => 'アプリ名.herokuapp.com' }
+  host = 'illustrator-kelly.herokuapp.com'
+  config.action_mailer.default_url_options = { host: host }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :user_name      => ENV['SENDGRID_USERNAME'],
