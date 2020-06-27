@@ -28,27 +28,22 @@
       </label>
     <!-- 法人向け依頼方法 -->
     <div class="labelegal_entity" id="labelegal_entity">
+      <div id="result">
 
-      <%= form_with model: @contact,url: { action: "contact" },local: 'true' do |form| %>
-        <% if @contact.errors.any? %>
-          <% @contact.errors.full_messages.each do |message| %>
-            <li>
-              <%=  message %>
-            </li>
-          <% end %>
-        <% end %>
+      </div>
+      <%= form_with model: @contact,url: { action: "contact" } do |form| %>
         <p>Your Email Address
           <span class="japanFont">
             （連絡先メールアドレス）
           </span>
         </p>
-        <%= form.text_field :email, class: :input, :placeholder => "kelly@example.com" %>
+        <%= form.text_field :email, class: :input, id: :input1, :placeholder => "kelly@example.com" %>
         <p>Budget
           <span class="japanFont">
             （予算）
           </span>
         </p>
-        <%= form.text_field :budget, class: :input %>
+        <%= form.text_field :budget, class: :input, id: :input2 %>
         <p class="yen">
           Japanese Yen
         </p>
@@ -57,7 +52,7 @@
             （依頼内容）
           </span>
         </p>
-        <%= form.text_area :content, class: :textarea,cols: 80, rows: 8  %>
+        <%= form.text_area :content, class: :textarea, id: :textarea1, cols: 80, rows: 8  %>
         <button type="submit" class="menu menuFontSize send">
           <span class="border1"></span>
           <span class="border2"></span>

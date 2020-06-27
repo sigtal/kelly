@@ -4,12 +4,18 @@ class HomeController < ApplicationController
   end
   def contact
     @contact = Contact.new(contact_params)
-  if @contact.save
-    ContactMailer.receive_request(@contact).deliver_now
-    redirect_to('/')
-  else
-    render :top
-  end
+
+    respond_to do |format|
+      if @contact.save
+        ContactMailer.receive_request(@contact).deliver_now
+        format.html
+        format.js { render 'shared/success'}
+      else
+        format.html
+        format.js { render 'shared/error' }
+      end
+    end
+
   end
 
   private
