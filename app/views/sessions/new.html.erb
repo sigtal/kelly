@@ -1,12 +1,20 @@
-<%= form_with model: @admin,url: { action: "create"} do |form| %>
-  <%= form.label :name %>
-  <%= form.text_field :name %>
+<% if logged_in? %>
 
-  <%= form.label :email %>
-  <%= form.email_field :email %>
+  <%= link_to "logout", '/logout', method: :delete %>
 
-  <%= form.label :password %>
-  <%= form.password_field :password %>
+<% else %>
 
-  <%= form.submit "login" %>
+  <%= form_with model: @admin,url: { action: "create"} do |form| %>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+
+    <%= form.submit "login" %>
+  <% end %>
+
 <% end %>
