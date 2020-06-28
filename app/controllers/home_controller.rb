@@ -15,6 +15,11 @@ class HomeController < ApplicationController
         format.js { render 'shared/error' }
       end
     end
+  end
+  def login
+
+  end
+  def test
 
   end
 
