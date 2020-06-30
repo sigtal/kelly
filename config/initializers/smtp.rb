@@ -5,5 +5,6 @@ ActionMailer::Base.smtp_settings = {
     user_name:            'apikey',
     password:             ENV['SENDGRID_API_KEY'], # 先ほど作成したアプリパスワード
     authentication:       'plain',
-    enable_starttls_auto: true
+    enable_starttls_auto: true,
+    openssl_verify_mode: 'peer'
  }
