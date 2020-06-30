@@ -1,4 +1,4 @@
-ActionMailer :: Base.smtp_settings = {
+ActionMailer::Base.smtp_settings = {
    address:              'smtp.sendgrid.com',
     port:                 587,
     domain:               'heroku.com',
