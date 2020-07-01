@@ -62,6 +62,15 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { :host => 'https://illustrator-kelly.herokuapp.com/' }
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+     address:              'smtp.sendgrid.com',
+      port:                 587,
+      domain:               'heroku.com',
+      user_name:            'apikey',
+      password:             ENV['SENDGRID_API_KEY'], # 先ほど作成したアプリパスワード
+      authentication:       'plain',
+      enable_starttls_auto: false
+   }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
