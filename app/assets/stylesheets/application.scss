@@ -140,7 +140,23 @@ body {
 .topScroll:hover{
   opacity:0.8;
 }
-.fas{
+.fas,.far{
   font-size: 100px;
   color:white;
+}
+.illust-post{
+  background-color:black;
+  padding:10px 15px;
+  border-radius: 20px;
+  opacity:0.56;
+  position: absolute;
+  right: 10%;
+  top: 1200px
+}
+.illust-post-form{
+  display: none;
+}
+.illust-post-button{
+  float:right;
+
 }

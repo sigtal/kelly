@@ -1,5 +1,20 @@
 <!-- イラスト -->
 <div class="illust" id="illust">
+  <% if logged_in? %>
+    <div class="illust-post">
+      <div class="illust-post-button" id="illust-post-button">
+        <span class="far fa-plus-square"></span>
+      </div>
+      <div class="illust-post-form" id="illust-post-form">
+        <%= form_with model: @illust,url: { action: "create" } do |form| %>
+          <%= form.file_field :avatar %>
+          <br>
+          <%= form.text_field :name %>
+          <%= form.submit %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
   <h1>illust</h1>
   <!-- イラストパーツ -->
   <div class="illust-container">
@@ -8,7 +23,6 @@
         <p></p>
         <img class="imagetest" src="assets/test.jpg" alt=""  oncontextmenu="return false;">
       </div>
-
     </div>
   </div>
   <% @illusts.each do |illust| %>

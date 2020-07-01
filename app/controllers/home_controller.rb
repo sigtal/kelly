@@ -1,9 +1,10 @@
 class HomeController < ApplicationController
-  before_action :admin_user, only: [:new, :create]
+  before_action :admin_user, only: :create
 
   def top
     @contact = Contact.new
     @illusts = Illust.all
+    @illust = Illust.new
   end
   def contact
     @contact = Contact.new(contact_params)
@@ -20,9 +21,7 @@ class HomeController < ApplicationController
     end
   end
 
-  def new
-    @illust = Illust.new
-  end
+
   def create
     @illust = Illust.new(illust_params)
     @illust.save
