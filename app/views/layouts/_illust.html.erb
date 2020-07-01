@@ -6,10 +6,20 @@
     <div class="illust-content">
       <div class="content">
         <p></p>
-        <img src="assets/test.jpg" alt=""  oncontextmenu="return false;">
+        <img class="imagetest" src="assets/test.jpg" alt=""  oncontextmenu="return false;">
       </div>
+
     </div>
   </div>
+  <%= @illusts.each do |illust| %>
+    <div class="illust-container">
+      <div class="illust-content">
+        <div class="content">
+          <%= image_tag illust.avatar %>
+        </div>
+      </div>
+    </div>
+  <% end %>
   <!-- float要素破壊 -->
   <div class="clear" />
 </div>

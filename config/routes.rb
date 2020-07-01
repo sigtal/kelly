@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   get '/', to: 'home#top'
   post '/', to: 'home#contact'
-
+  get '/test', to: 'home#new'
+  post '/test', to: 'home#create'
 
   root 'home#top'
 

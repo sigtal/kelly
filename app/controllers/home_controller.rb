@@ -1,6 +1,9 @@
 class HomeController < ApplicationController
+  before_action :admin_user, only: [:new, :create]
+
   def top
     @contact = Contact.new
+    @illusts = Illust.all
   end
   def contact
     @contact = Contact.new(contact_params)
@@ -16,15 +19,24 @@ class HomeController < ApplicationController
       end
     end
   end
-  def login
 
+  def new
+    @illust = Illust.new
   end
-  def test
-
+  def create
+    @illust = Illust.new(illust_params)
+    @illust.save
+    redirect_to '/'
   end
 
   private
     def contact_params
       params.require(:contact).permit(:email,:budget,:content)
+    end
+    def illust_params
+      params.require(:illust).permit(:name,:avatar)
+    end
+    def admin_user
+      redirect_to(root_url) unless current_user
     end
 end

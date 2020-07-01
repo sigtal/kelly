@@ -1,0 +1,5 @@
+<%= form_with model: @illust,url: { action: "create" } do |form| %>
+  <%= form.file_field :avatar %>
+  <%= form.text_field :name %>
+  <%= form.submit %>
+  <% end %>
