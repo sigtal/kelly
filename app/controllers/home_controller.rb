@@ -3,8 +3,12 @@ class HomeController < ApplicationController
 
   def top
     @contact = Contact.new
-    @illusts = Illust.all
     @illust = Illust.new
+    @illusts = Illust.page(params[:page]).per(5)
+    respond_to do |format|
+      format.html
+      format.js { render 'shared/pagination'}
+    end
   end
   def contact
     @contact = Contact.new(contact_params)

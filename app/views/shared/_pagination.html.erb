@@ -1,0 +1,26 @@
+<% @illusts.each do |illust| %>
+   <div class="illust-container">
+     <div class="illust-content">
+       <div class="content">
+         <%= image_tag url_for(illust.avatar), class: 'illustavatar' %>
+       </div>
+     </div>
+   </div>
+   <!-- 後で整理すること！！ -->
+   <div class="fullimage">
+     <div class="close" id="close">
+       <span class="fas fa-times"></span>
+     </div>
+     <% if logged_in? %>
+       <div class="delete">
+         <%= link_to "/#{illust.id}", :method => :delete,  data: { confirm: 'Are you sure?' } do %>
+         <span class="fas fa-trash-alt"></span>
+         <% end %>
+       </div>
+     <% end %>
+     <%= image_tag illust.fullimage ,class: 'fullillust' %>
+   </div>
+ <% end %>
+
+
+<%= paginate @illusts, :remote => true %>
