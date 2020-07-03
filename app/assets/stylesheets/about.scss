@@ -5,11 +5,14 @@
   z-index: -10;
   padding:150px 0;
   width:100%;
-  background-image: url('/assets/fix_to_HP24.jpg');
-  background-size: cover;
-  // background: linear-gradient(white 50%,transparent );
+  // background-image: url('/assets/fix_to_HP24.jpg');
+  // background-size: cover;
+  background-image: linear-gradient(rgba(255,255,255,10) 70%,rgba(255,255,255,0.7) 80%,rgba(255,255,255,0.3) 90%,rgba(255,255,255,0) 100% );
 }
-
+.backimage{
+  width:80%;
+  margin: 0 auto;
+}
 
 .background{
   padding:0;
@@ -44,13 +47,13 @@ font-family: 'Monoton', cursive;
 .background:nth-child(4){
   background-image: url("/assets/315876.jpg");
   background-size:1002px 1002px;
-  background-position:70% 15%;
+  background-position:55% 0%;
 
 }
 .background:nth-child(5){
   background-image: url("/assets/明けましておめでとうございます。.jpg");
   background-size:1200px 800px;
-  background-position:30% -20%;
+  background-position:25% -10%;
 }
 .top-wrapper{
   padding-top:100px;
