@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/', to: 'home#top'
   post '/', to: 'home#contact'
   post '/test', to: 'home#create'
-
+  delete '/:id', to: 'home#delete'
   root 'home#top'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

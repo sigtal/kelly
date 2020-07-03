@@ -7,8 +7,13 @@
       </div>
       <div class="illust-post-form" id="illust-post-form">
         <%= form_with model: @illust,url: { action: "create" } do |form| %>
+          <%= form.label :avatar ,class: 'illust-post-label' %>
           <%= form.file_field :avatar %>
           <br>
+          <%= form.label :fullimage,class: 'illust-post-label' %>
+          <%= form.file_field :fullimage %>
+          <br>
+          <%= form.label :name,class: 'illust-post-label' %>
           <%= form.text_field :name %>
           <%= form.submit %>
         <% end %>
@@ -17,21 +22,27 @@
   <% end %>
   <h1>illust</h1>
   <!-- イラストパーツ -->
-  <div class="illust-container">
-    <div class="illust-content">
-      <div class="content">
-        <p></p>
-        <img class="imagetest" src="assets/test.jpg" alt=""  oncontextmenu="return false;">
-      </div>
-    </div>
-  </div>
   <% @illusts.each do |illust| %>
      <div class="illust-container">
        <div class="illust-content">
          <div class="content">
-           <%= image_tag url_for(illust.avatar) %>
+           <%= image_tag url_for(illust.avatar), class: 'illustavatar' %>
          </div>
        </div>
+     </div>
+     <!-- 後で整理すること！！ -->
+     <div class="fullimage">
+       <div class="close" id="close">
+         <span class="fas fa-times"></span>
+       </div>
+       <% if logged_in? %>
+         <div class="delete">
+           <%= link_to "/#{illust.id}", :method => :delete,  data: { confirm: 'Are you sure?' } do %>
+           <span class="fas fa-trash-alt"></span>
+           <% end %>
+         </div>
+       <% end %>
+       <%= image_tag illust.fullimage ,class: 'fullillust' %>
      </div>
    <% end %>
   <!-- float要素破壊 -->

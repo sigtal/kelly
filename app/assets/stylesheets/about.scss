@@ -5,7 +5,9 @@
   z-index: -10;
   padding:150px 0;
   width:100%;
-  background: linear-gradient(white,transparent);
+  background-image: url('/assets/fix_to_HP24.jpg');
+  background-size: cover;
+  // background: linear-gradient(white 50%,transparent );
 }
 
 

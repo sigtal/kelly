@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  before_action :admin_user, only: :create
+  before_action :admin_user, only: [:create,:delete]
 
   def top
     @contact = Contact.new
@@ -27,13 +27,17 @@ class HomeController < ApplicationController
     @illust.save
     redirect_to '/'
   end
-
+  def delete
+    @illust = Illust.find_by(id: params[:id])
+    @illust.destroy
+    redirect_to '/'
+  end
   private
     def contact_params
       params.require(:contact).permit(:email,:budget,:content)
     end
     def illust_params
-      params.require(:illust).permit(:name,:avatar)
+      params.require(:illust).permit(:name,:avatar,:fullimage)
     end
     def admin_user
       redirect_to(root_url) unless current_user
