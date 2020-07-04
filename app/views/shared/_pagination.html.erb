@@ -21,6 +21,8 @@
      <%= image_tag illust.fullimage ,class: 'fullillust' %>
    </div>
  <% end %>
+ <div class="clear" />
 
-
-<%= paginate @illusts, :remote => true %>
+<div class="paginate">
+  <%= paginate @illusts, :remote => true %>
+</div>
