@@ -15,5 +15,19 @@ document.addEventListener('turbolinks:load', function(){
         fullImage.style.display = 'none';
       });
     });
+    fullImage.querySelectorAll('#fullimage').forEach(function(full){
+        console.log(full);
+        full.addEventListener('load', function(){
+          var width = full.naturalWidth;
+          var height = full.naturalHeight;
+          if(width > height){
+            full.style.height = '60%'
+          }else if (width == height) {
+            console.log('bar');
+          }else{
+            full.style.width = '44%'
+          };
+        });
+    });
   });
 });

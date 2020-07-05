@@ -7,6 +7,7 @@
 .pagination a{
   color: black;
   text-decoration: none;
+
 }
 
 .pagination .current{
@@ -27,6 +28,8 @@
   transition: 0.2s;
   font-family: 'Coiny', cursive;
   cursor: pointer;
+  box-shadow: 0 0 0 100px rgba(220,220,220,0.5) inset;
+  
 }
 .page-s:hover{
   background: black;

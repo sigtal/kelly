@@ -29,12 +29,17 @@ body {
   color: black;
   letter-spacing: 4px;
   text-decoration: none;
+  box-shadow: 0 0 0 100px rgba(220,220,220,0.5) inset;
+  
   font-size: 24px;
   overflow: hidden;
   transition: 0.2s;
   margin: 0 20px;
   font-family: 'Coiny', cursive;
   cursor: pointer;
+  // box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.4) ;
+  // background: white;
+
 }
 .menu:hover{
   color: white;
