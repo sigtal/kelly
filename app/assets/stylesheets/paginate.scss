@@ -3,105 +3,96 @@
   margin: 0 auto;
   font-family: 'Coiny', cursive;
   font-size: 24px;
+  a{
+    color: black;
+    text-decoration: none;
+  }
+  .current{
+    margin: 0 20px;
+    padding: 30px 60px;
+    opacity: 1;
+  }
 }
-.pagination a{
-  color: black;
-  text-decoration: none;
 
-}
-
-.pagination .current{
-  margin: 0 20px;
-  padding: 30px 60px;
-  display: inline-block;
-  position: relative;
-  opacity: 1;
-}
 .page-s{
   margin: 0 20px;
   letter-spacing: 4px;
   padding: 30px 60px;
-  position: relative;
-  display: inline-block;
+  display:inline-block;
   text-decoration: none;
   overflow: hidden;
   transition: 0.2s;
-  font-family: 'Coiny', cursive;
   cursor: pointer;
   box-shadow: 0 0 0 100px rgba(220,220,220,0.5) inset;
-  
-}
-.page-s:hover{
-  background: black;
-  transition-delay: 1s;
-
-  & a{
+  position: relative;
+  a{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 10px; 
+  }
+  &:hover{
+    background: black;
     transition-delay: 1s;
-    color:white;
+    a{
+      transition-delay: 1s;
+      color:white;
+    }
+  }
+  span{
+    position: absolute;
+    display: block;
+  }
+  .test1{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,black);
+  }
+  .test2{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,black);
+  }
+  .test3{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,black);
+  }
+  .test4{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,black);
+  }
+  &:hover .test1{
+    left: 100%;
+    transition: 1s;
+  }
+  &:hover .test2{
+    top: 100%;
+    transition: 1s;
+    transition-delay:0.25s
+  }
+  &:hover .test3{
+    right: 100%;
+    transition: 1s;
+    transition-delay:0.5s
+  }
+  &:hover .test4{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay:0.75s
   }
 }
-
-.page-s span{
-  position: absolute;
-  display: block;
-}
-.test1{
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg,transparent,black);
-}
-.test2{
-  top: -100%;
-  right: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(180deg,transparent,black);
-
-}
-.test3{
-  bottom: 0;
-  right: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(270deg,transparent,black);
-
-}
-.test4{
-  bottom: -100%;
-  left: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(360deg,transparent,black);
-
-}
-.page-s:hover .test1{
-  left: 100%;
-  transition: 1s;
-
-}
-.page-s:hover .test2{
-  top: 100%;
-  transition: 1s;
-  transition-delay:0.25s
-
-}
-.page-s:hover .test3{
-  right: 100%;
-  transition: 1s;
-  transition-delay:0.5s
-
-}
-.page-s:hover .test4{
-  bottom: 100%;
-  transition: 1s;
-  transition-delay:0.75s
-
-}
-
-
-
 .page{
   opacity: 0.56;
   font-size: 50px;

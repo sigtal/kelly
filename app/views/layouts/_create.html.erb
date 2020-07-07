@@ -1,0 +1,21 @@
+<div class="illust-post-form" id="illust-post-form">
+  <%= form_with model: @illust,url: { action: "create" } do |form| %>
+    <div class="post-list">
+      <%= form.label :avatar ,class: 'illust-post-label' %>
+      <%= form.file_field :avatar, id: 'avatar-post' %>
+      <br>
+      <img id="myImage" alt="">
+    </div>
+      <div class="post-list">
+      <%= form.label :fullimage,class: 'illust-post-label' %>
+      <%= form.file_field :fullimage %>
+      <br>
+      <img id="myImage" alt="">
+    </div>
+    <div class="post-list">
+      <%= form.label :name,class: 'illust-post-label' %>
+      <%= form.text_field :name %>
+    </div>
+    <%= form.submit %>
+  <% end %>
+</div>

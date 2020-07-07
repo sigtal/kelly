@@ -18,100 +18,13 @@ body {
   margin: 0;
   padding: 0;
 }
-.head{
-  padding: 50px 0;
-  width:100%;
-}
-.menu{
-  position: relative;
-  display: inline-block;
-  padding: 30px 60px;
-  color: black;
-  letter-spacing: 4px;
-  text-decoration: none;
-  box-shadow: 0 0 0 100px rgba(220,220,220,0.5) inset;
-  
-  font-size: 24px;
-  overflow: hidden;
-  transition: 0.2s;
-  margin: 0 20px;
-  font-family: 'Coiny', cursive;
-  cursor: pointer;
-  // box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.4) ;
-  // background: white;
-
-}
-.menu:hover{
-  color: white;
-  background: black;
-  transition-delay: 1s;
-}
-.menu span{
-  position: absolute;
-  display: block;
-}
-.border1{
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg,transparent,black);
-}
-.menu:hover .border1{
-  left: 100%;
-  transition: 1s;
-}
-.menu span:nth-child(2){
-  top: -100%;
-  right: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(180deg,transparent,black);
-}
-.menu:hover span:nth-child(2){
-  top: 100%;
-  transition: 1s;
-  transition-delay:0.25s
-}
-.menu span:nth-child(3){
-  bottom: 0;
-  right: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(270deg,transparent,black);
-}
-.menu:hover span:nth-child(3){
-  right: 100%;
-  transition: 1s;
-  transition-delay:0.5s
-}
-.menu span:nth-child(4){
-  bottom: -100%;
-  left: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(360deg,transparent,black);
-}
-.menu:hover span:nth-child(4){
-  bottom: 100%;
-  transition: 1s;
-  transition-delay:0.75s
+h1{
+  opacity: 0.7;
+  font-size: 45px;
+  letter-spacing: 5px;
 }
 
 
-.btn{
-  padding: 8px 24px;
-  color: white;
-  display: inline-block;
-  opacity: 0.8;
-  border-radius: 4px;
-  text-decoration: none;
-  font-size: 30px;
-
-}
-.btn:hover {
-  opacity: 1;
-}
 
 
 .background-image{
@@ -148,23 +61,4 @@ body {
 .fas,.far{
   font-size: 100px;
   color:white;
-}
-.illust-post{
-  background-color:black;
-  padding:10px 15px;
-  border-radius: 20px;
-  opacity:0.56;
-  position: absolute;
-  right: 10%;
-  top: 800px
-}
-.illust-post-label{
-  color: white;
-}
-.illust-post-form{
-  display: none;
-}
-.illust-post-button{
-  float:right;
-
 }

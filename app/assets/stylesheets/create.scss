@@ -1,0 +1,16 @@
+.create{
+  width: 90%;
+  margin: 0 auto;
+  height: 600px;
+  font-family: 'Coiny', cursive;
+  background-color: rgba(0,0,0,0.56);
+  padding:10px 15px;
+  border-radius: 20px;
+  .post-list{
+    float: left;
+    color: white;
+    img{
+      width: 90%;
+    }
+  }
+}

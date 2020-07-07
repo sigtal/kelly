@@ -1,4 +1,4 @@
-document.getElementById("illust-container").innerHTML = "<%= escape_javascript(render 'shared/pagination') %>";
+document.getElementById("illust-container").innerHTML = "<%= escape_javascript(render 'layouts/illust') %>";
 document.querySelectorAll('.illust-container').forEach(function(illust){
   var image = illust.children[0].children[0].children[0];
   var fullImage = illust.nextElementSibling;

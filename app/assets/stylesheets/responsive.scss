@@ -1,0 +1,19 @@
+.iphone{
+  display: none;
+  width: 100%;
+}
+.lactop{
+  // display: none;
+}
+
+@media(max-width: 600px){
+  .iphone{
+    display: block;
+  }
+  .lactop{
+    display: none;
+  }
+  .header{
+    display: none;
+  }
+}

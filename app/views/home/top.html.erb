@@ -1,20 +1,37 @@
-<%= render 'layouts/header' %>
+<div class="header" id="header">
+  <%= render 'layouts/header' %>
+</div>
+<div class="topimage">
+  <%= render 'layouts/about' %>
+</div>
+<% if logged_in? %>
+  <div class="create" id="create">
+    <%= render 'layouts/create' %>
+  </div>
+<% end %>
+<div class="illust" id="illust">
+  <h1>illust</h1>
+  <%= render 'layouts/illust' %>
+</div>
+<div class="sns" id="sns">
+  <%= render 'layouts/sns' %>
+</div>
+<div class="3">
+  <%= render 'layouts/contact' %>
 
-<%= render 'layouts/about' %>
+</div>
 
-<%= render 'layouts/illust' %>
 
-<%= render 'layouts/contact' %>
-
-<%= render 'layouts/sns' %>
-
-<%# 固定背景 %>
-<img src="/assets/backgroundimage.jpg" class="background-image">
-
+<%# 固定背景  %>
+<img src="/assets/backgroundimage.jpg" class="background-image lactop">
+<!-- スマホ用固定背景 -->
+<img src="/assets/background-iphone.jpg" class="background-image iphone">
 
 <%# ページを一番上に戻す %>
 <div id="topScroll" class="topScroll">
   <span class="fas fa-arrow-up"></span>
 </div>
 
-<%= render 'layouts/footer' %>
+<div class="">
+  <%= render 'layouts/footer' %>
+</div>

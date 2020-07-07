@@ -1,5 +1,5 @@
 document.addEventListener('turbolinks:load', function(){
-  var element = document.getElementById( "head" ) ;
+  var element = document.getElementById( "header" ) ;
   var scrollButton = document.getElementById( "topScroll" )
 
   // 一番上にスクロール
