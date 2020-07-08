@@ -74,7 +74,7 @@
 
 .mail{
   font-family: 'Coiny', cursive;
-  height: 160vh;
+  margin-bottom: 100px;
 }
 .mail h1{
   font-family: 'Coiny', cursive;
@@ -83,7 +83,7 @@
 }
 .mail p{
   font-size: 30px;
-  opacity: 0.49;
+  opacity: 0.8;
 }
 .mail_wrapper{
   padding: 0 150px;
@@ -124,6 +124,12 @@ visibility: hidden;
   border-radius: 20px;
   opacity: 0.56;
 
+}
+.input:focus,.textarea:focus{
+  opacity: 1;
+}
+.textarea{
+  width:90%;
 }
 .copy-text{
   font-family: 'Coiny', cursive;

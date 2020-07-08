@@ -51,7 +51,7 @@
             （依頼内容）
           </span>
         </p>
-        <%= form.text_area :content, class: :textarea, id: :textarea1, cols: 80, rows: 8  %>
+        <%= form.text_area :content, class: :textarea, id: :textarea1,onchange: "textAreaHeightSet(this)",oninput: "textAreaHeightSet(this)"  %>
         <button type="submit" class="menu menuFontSize send">
           <span class="border1"></span>
           <span class="border2"></span>
@@ -66,7 +66,7 @@
     <div class="individual" id="individual">
       <p>Please copy the content below</p>
       <p class="japanFont">1.以下の内容をコピーしてください</p>
-      <textarea name="name" class="textarea copy-text" id="copyTarget" readonly rows="4" cols="45">Your Email Address（連絡先メールアドレス）:&#13Content（依頼内容）:
+      <textarea name="name" class="textarea copy-text" id="copyTarget" readonly oninput="textAreaHeightSet(this)" onchange="textAreaHeightSet(this)">Your Email Address（連絡先メールアドレス）:&#13Content（依頼内容）:
       </textarea><br/>
       <label class="menu" id="copyTrigger">
         <span class="border1"></span>
@@ -92,3 +92,20 @@
       </a>
     </div>
   </div>
+  <script type="text/javascript">
+    function textAreaHeightSet(argObj){
+ // ==============================================
+ //	フォーカス時の背景色リセット
+ // ==============================================
+  // 一旦テキストエリアを小さくしてスクロールバー（縦の長さを取得）
+  argObj.style.height = "10px";
+  var wSclollHeight = parseInt(argObj.scrollHeight);
+  // 1行の長さを取得する
+  var wLineH = parseInt(argObj.style.lineHeight.replace(/px/, ''));
+  // 最低2行の表示エリアにする
+  if(wSclollHeight < (wLineH * 2)){wSclollHeight=(wLineH * 2);}
+  // テキストエリアの高さを設定する
+  argObj.style.height = wSclollHeight + "px";
+}
+
+  </script>

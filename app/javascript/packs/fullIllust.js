@@ -19,13 +19,23 @@ document.addEventListener('turbolinks:load', function(){
         full.addEventListener('load', function(){
           var width = full.naturalWidth;
           var height = full.naturalHeight;
-          if(width > height){
-            full.style.height = '60%'
-          }else if (width == height) {
-            full.style.width = '50%'
+          if(window.innerWidth > 600){
+            if(width > height){
+              full.style.height = '60%'
+            }else if (width == height) {
+              full.style.width = '50%'
+            }else{
+              full.style.width = '44%'
+            };
           }else{
-            full.style.width = '44%'
-          };
+            if(width > height){
+              full.style.width = '100%'
+            }else if (width == height) {
+              full.style.width = '100%'
+            }else{
+              full.style.width = '100%'
+            };
+          }
         });
     });
   });
