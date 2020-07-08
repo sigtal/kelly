@@ -1,7 +1,7 @@
 <div class="header" id="header">
   <%= render 'layouts/header' %>
 </div>
-<div class="topimage">
+<div class="topimage" id="topimage">
   <%= render 'layouts/about' %>
 </div>
 <% if logged_in? %>
@@ -16,9 +16,8 @@
 <div class="sns" id="sns">
   <%= render 'layouts/sns' %>
 </div>
-<div class="3">
+<div class="mail" id="contact">
   <%= render 'layouts/contact' %>
-
 </div>
 
 
@@ -32,6 +31,9 @@
   <span class="fas fa-arrow-up"></span>
 </div>
 
-<div class="">
+<div class="footer">
   <%= render 'layouts/footer' %>
+</div>
+<div class="iphone-menu">
+  <%= render 'layouts/iphonemenu' %>
 </div>
