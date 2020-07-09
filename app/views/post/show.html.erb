@@ -1,2 +1,3 @@
-<% set_meta_tags og:{ image: @illust.fullimage } %>
+<% set_meta_tags og:{ image: image_tag(@illust.fullimage) } %>
+<%= link_to '戻る', '/' %>
 <%= image_tag @illust.fullimage ,id: 'page-fullimage'%>
