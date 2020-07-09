@@ -6,7 +6,7 @@ module ApplicationHelper
     reverse: true,
     separator: '|',
     description: 'イラストレーター「ケリー（kelly）」のイラストサイト、仕事の依頼はこちらまで！',
-    keywords: 'kelly',
+    keywords: 'イラスト,イラスト素材,Kelly',
     canonical: request.original_url,
     noindex: ! Rails.env.production?,
     # 後でちゃんとやること！！いいな？
