@@ -52,6 +52,7 @@
       right:20%;
       z-index: 30;
       cursor: pointer;
+      font-size: 100px;
       .fa-times{
         color:black;
       }
@@ -63,6 +64,26 @@
       z-index: 100;
       font-size: 100px;
       span{
+        color:black;
+      }
+    }
+    .share{
+      font-size: 100px;
+      position: absolute;
+      z-index: 30;
+      p{
+        display: none;
+      }
+      .Vertical{
+      }
+      .s-facebook{
+        color:black;
+      }
+      .s-twitter{
+        color:black;
+      }
+      .s-line{
+        display: none;
         color:black;
       }
     }

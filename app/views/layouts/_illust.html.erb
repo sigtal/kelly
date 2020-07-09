@@ -11,7 +11,15 @@
     <!--フルイメージ-->
     <div class="fullimage">
       <div class="close" id="close">
-        <span class="fas fa-times"></span>
+        <span class="fas fa-times fa-fw"></span>
+      </div>
+      <div class="share" id="share">
+        <p>Share to ...</p>
+        <a class="s-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<%= request.url + "post/#{illust.id}"%>"><span class="fab fa-facebook-square fa-fw"></span><p>Facebook</p></a>
+        <br class="Vertical">
+        <a class="s-twitter" target="_blank" href="https://twitter.com/share?url=<%= request.url + "post/#{illust.id}" %>"><span class="fab fa-twitter-square fa-fw"></span><p>Twitter</p></a>
+        <br class="Vertical">
+        <a class="s-line" target="_blank" href="http://line.me/R/msg/text/?<%= request.url + "post/#{illust.id}"%>"><span class="fab fa-line fa-fw"></span><p>LINE</p></a>
       </div>
       <% if logged_in? %>
         <!-- 削除フォーム -->

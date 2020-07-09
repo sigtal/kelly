@@ -16,17 +16,41 @@ document.querySelectorAll('.illust-container').forEach(function(illust){
     });
   });
   fullImage.querySelectorAll('#fullimage').forEach(function(full){
-      console.log(full);
       full.addEventListener('load', function(){
         var width = full.naturalWidth;
         var height = full.naturalHeight;
-        if(width > height){
-          full.style.height = '60%'
-        }else if (width == height) {
-          full.style.width = '50%'
+        var share = full.parentNode.children[1];
+        var newLine1 = full.parentNode.children[1].children[1];
+        var newLine2 = full.parentNode.children[1].children[3];
+        if(window.innerWidth > 600){
+          if(width > height){
+            full.style.height = '60%';
+            share.style.top = '30%';
+            share.style.right = '20%';
+            newLine1.style.display = 'none';
+            newLine2.style.display = 'none';
+          }else if (width == height) {
+            full.style.width = '50%';
+            share.style.top = '30%';
+            share.style.right = '20%';
+            newLine1.style.display = 'block';
+            newLine2.style.display = 'block';
+          }else{
+            full.style.width = '44%'
+            share.style.top = '30%';
+            share.style.right = '20%';
+            newLine1.style.display = 'block';
+            newLine2.style.display = 'block';
+          };
         }else{
-          full.style.width = '44%'
-        };
+          if(width > height){
+            full.style.width = '100%'
+          }else if (width == height) {
+            full.style.width = '100%'
+          }else{
+            full.style.width = '100%'
+          };
+        }
       });
   });
 });

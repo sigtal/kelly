@@ -15,8 +15,8 @@ module ApplicationHelper
       # { href: image_url('icon.jpg'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/jpg' },
     # ],
     og: {
-      site_name: 'kelly',
-      title: 'hello illust',
+      site_name: 'illustrator-kelly',
+      title: 'kelly',
       description: 'イラストレーター「ケリー（kelly）」のイラストサイト、仕事の依頼はこちらまで！',
       type: 'website',
       url: request.original_url,
@@ -27,6 +27,9 @@ module ApplicationHelper
       card: 'summary_large_image',
       site: '@kelly_dog_cat',
     }
+    # fb: {
+    #   app_id: '自身のfacebookのapplication ID'
+    # }
   }
   end
 end
