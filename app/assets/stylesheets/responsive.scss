@@ -233,32 +233,31 @@
   }
   .illust{
     .illust-container{
-      width: 50%;
+      width: 25%;
       .illust-content{
-        height: 150px;
+        height: 200px;
         .content{
-          width:100px;
-          height: 100px;
+          width: 150px;
+          height:150px;
         }
       }
     }
     .fullimage{
-
       .fullillust{
       }
       .close{
-        background: black;
+        background: rgba(220,220,220,0.7);
         border-radius: 20px;
-        height: 50px;
-        width:60px;
+        height: 100px;
+        width:120px;
         position: absolute;
-        top:5%;
+        top:70%;
         right:5%;
         z-index: 30;
         .fa-times{
-          font-size: 50px;
+          font-size: 100px;
           position: absolute;
-          color:white;
+
         }
       }
 
@@ -268,40 +267,20 @@
         }
       }
       .share{
-        font-size: 20px;
-        width: 100%;
-        background: black;
-        color:white;
-        position: absolute;
-        bottom: 0;
-        z-index: 30;
         .shareTitle{
           font-size:30px;
         }
         a{
-          float:left;
-          text-align: center;
-          margin: 0 auto;
-          text-decoration: none;
         }
         p{
-          display: inline;
         }
         .Vertical{
-          display: none;
         }
         .s-facebook{
-          color:white;
-          width:33%
         }
         .s-twitter{
-          color:white;
-          width:33%
         }
         .s-line{
-          display: block;
-          color:white;
-          width:33%
         }
       }
     }
@@ -340,6 +319,7 @@
     }
   }
   .mail{
+    display: none;
     opacity: 1;
     h1{
       padding: 0;
