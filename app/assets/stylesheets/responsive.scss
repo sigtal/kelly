@@ -194,6 +194,12 @@
 }
 
 @media(max-width: 1000px){
+  .topScroll{
+    .fas,.far{
+      font-size: 60px;
+      color:white;
+    }
+  }
   .header{
     .menu{
       font-size: 20px;
@@ -319,17 +325,17 @@
     }
   }
   .mail{
-    display: none;
     opacity: 1;
-    h1{
-      padding: 0;
-    }
     .menu{
       margin: 20px 0;
       width: 90%;
-      padding: 0;
+      padding: 0 40px;
+      font-size: 30px;
       text-align: center;
       height: 80px;
+      .japanFont{
+        display: none;
+      }
     }
     .mail_wrapper{
       margin: 0 auto;

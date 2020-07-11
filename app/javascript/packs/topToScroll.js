@@ -12,7 +12,11 @@ document.addEventListener('turbolinks:load', function(){
     };
 
     // スクロールボタンを表示・非表示
-    var px_change = 600;
+    if(window.innerWidth > 1000){
+      var px_change = 600;
+    }else{
+      var px_change = 200;
+    };
     window.addEventListener('scroll', function() {
       var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       if ( scrollTop > px_change ) {

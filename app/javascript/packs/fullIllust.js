@@ -80,12 +80,12 @@ function imageResize (){
               full.style.width = '80%';
               share.style.top = '5%';
               share.style.right = '5%';
-              newLine1.style.display = 'block';
-              newLine2.style.display = 'block';
+              newLine1.style.display = 'none';
+              newLine2.style.display = 'none';
             }else{
               full.style.width = '70%'
               share.style.top = '5%';
-              share.style.right = '5%';
+              share.style.right = '2%';
               newLine1.style.display = 'block';
               newLine2.style.display = 'block';
             };
