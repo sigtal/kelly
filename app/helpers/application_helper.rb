@@ -5,7 +5,7 @@ module ApplicationHelper
     title: 'kelly',
     reverse: true,
     separator: '|',
-    description: 'イラストレーター「ケリー（kelly）」のイラストサイト、仕事の依頼はこちらまで！',
+    description: 'ケリーのポートフォリオサイトです。ご依頼はコンタクトフォームへ',
     keywords: 'イラスト,イラスト素材,Kelly',
     canonical: request.original_url,
     noindex: ! Rails.env.production?,
@@ -17,7 +17,7 @@ module ApplicationHelper
     og: {
       site_name: 'illustrator-kelly',
       title: 'kelly',
-      description: 'イラストレーター「ケリー（kelly）」のイラストサイト、仕事の依頼はこちらまで！',
+      description: 'ケリーのポートフォリオサイトです。ご依頼はコンタクトフォームへ',
       type: 'website',
       url: request.original_url,
       image: image_url('/assets/backgroundimage.jpg'),

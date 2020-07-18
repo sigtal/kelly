@@ -1,5 +1,5 @@
 <div class="illust-post-form" id="illust-post-form">
-  <%= form_with model: @illust,url: { action: "create" } do |form| %>
+  <%= form_with model: @illust,url: { action: "createIllust" } do |form| %>
     <div class="post-list">
       <%= form.label :avatar ,class: 'illust-post-label' %>
       <%= form.file_field :avatar, id: 'avatar-post' %>
@@ -13,9 +13,15 @@
       <img id="fullimage-illust" alt="">
     </div>
     <div class="post-list">
-      <%= form.label :name,class: 'illust-post-label' %>
-      <%= form.text_field :name %>
+      <% @tags.each do |tag| %>
+        <%= form.check_box :categories,{multiple: true}, tag.category,nil  %>
+        <%= form.label :categories, tag.category %>
+      <% end %>
     </div>
+    <%= form.submit %>
+  <% end %>
+  <%= form_with model: @tag,url: { action: "createTag" } do |form| %>
+    <%= form.text_field :category %>
     <%= form.submit %>
   <% end %>
 </div>

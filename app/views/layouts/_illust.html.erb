@@ -1,39 +1,39 @@
 <!-- イラスト -->
 <div id="illust-container">
-  <% @illusts.each do |illust| %>
-    <div class="illust-container">
-      <div class="illust-content">
-        <div class="content">
-          <%= image_tag url_for(illust.avatar), class: 'illustavatar' %>
+    <% @illusts.each do |illust| %>
+      <div class="illust-container">
+        <div class="illust-content">
+          <div class="content">
+            <%= image_tag url_for(illust.avatar), class: 'illustavatar' %>
+          </div>
         </div>
       </div>
-    </div>
-    <!--フルイメージ-->
-    <div class="fullimage">
-      <div class="close" id="close">
-        <span class="fas fa-times fa-fw"></span>
-      </div>
-      <div class="share" id="share">
-        <div class="shareTitle">
-          <p>Share to ...</p>
+      <!--フルイメージ-->
+      <div class="fullimage">
+        <div class="close" id="close">
+          <span class="fas fa-times fa-fw"></span>
         </div>
-        <a class="s-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<%= request.url + "post/#{illust.id}"%>"><span class="fab fa-facebook-square fa-fw"></span><p>Facebook</p></a>
-        <br class="Vertical">
-        <a class="s-twitter" target="_blank" href="https://twitter.com/share?url=<%= request.url + "post/#{illust.id}" %>"><span class="fab fa-twitter-square fa-fw"></span><p>Twitter</p></a>
-        <br class="Vertical">
-        <a class="s-line" target="_blank" href="http://line.me/R/msg/text/?<%= request.url + "post/#{illust.id}"%>"><span class="fab fa-line fa-fw"></span><p>LINE</p></a>
-      </div>
-      <% if logged_in? %>
-        <!-- 削除フォーム -->
-        <div class="delete">
-          <%= link_to "/#{illust.id}", :method => :delete,  data: { confirm: 'Are you sure?' } do %>
-            <span class="fas fa-trash-alt"></span>
+        <div class="share" id="share">
+          <div class="shareTitle">
+            <p>Share to ...</p>
+          </div>
+          <a class="s-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<%= request.url + "post/#{illust.id}"%>"><span class="fab fa-facebook-square fa-fw"></span><p>Facebook</p></a>
+          <br class="Vertical">
+          <a class="s-twitter" target="_blank" href="https://twitter.com/share?url=<%= request.url + "post/#{illust.id}" %>"><span class="fab fa-twitter-square fa-fw"></span><p>Twitter</p></a>
+          <br class="Vertical">
+          <a class="s-line" target="_blank" href="http://line.me/R/msg/text/?<%= request.url + "post/#{illust.id}"%>"><span class="fab fa-line fa-fw"></span><p>LINE</p></a>
+        </div>
+        <% if logged_in? %>
+          <!-- 削除フォーム -->
+          <div class="delete">
+            <%= link_to "/#{illust.id}", :method => :delete,  data: { confirm: 'Are you sure?' } do %>
+              <span class="fas fa-trash-alt"></span>
+            <% end %>
+          </div>
           <% end %>
-        </div>
-        <% end %>
-      <%= image_tag illust.fullimage ,class: 'fullillust',id: 'fullimage' %>
-    </div>
-  <% end %>
+        <%= image_tag illust.fullimage ,class: 'fullillust',id: 'fullimage' %>
+      </div>
+    <% end %>
   <div class="clear" />
   <div class="paginate">
     <%= paginate @illusts, :remote => true %>

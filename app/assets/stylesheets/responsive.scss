@@ -5,6 +5,162 @@
 .lactop{
   // display: none;
 }
+@media(max-width: 1000px){
+  .topScroll{
+    .fas,.far{
+      font-size: 60px;
+      color:white;
+    }
+  }
+  .header{
+    .menu{
+      font-size: 20px;
+      padding: 20px 40px;
+    }
+  }
+  .create{
+    // display: none;
+  }
+  .topimage{
+    height: 350px;
+    .backimage{
+      .background{
+        font-size: 1100%;
+        &:nth-child(1){
+          background-size:200px 354px;
+          background-position:60% 30%;
+        }
+        &:nth-child(2){
+          background-size:400px 565px;
+          background-position:57% 0%;
+        }
+        &:nth-child(3){
+          background-size:200px 304px;
+          background-position:70% 70%;
+        }
+        &:nth-child(4){
+          background-size:500px 500px;
+          background-position:55% -10%;
+        }
+        &:nth-child(5){
+          background-size:600px 400px;
+          background-position:30% 0%;
+        }
+      }
+    }
+  }
+  .illust{
+    .illust-container{
+      width: 25%;
+      .illust-content{
+        height: 200px;
+        .content{
+          width: 150px;
+          height:150px;
+        }
+      }
+    }
+    .fullimage{
+      .fullillust{
+      }
+      .close{
+        background: rgba(220,220,220,0.7);
+        border-radius: 20px;
+        height: 100px;
+        width:120px;
+        position: absolute;
+        top:70%;
+        right:5%;
+        z-index: 30;
+        .fa-times{
+          font-size: 100px;
+          position: absolute;
+
+        }
+      }
+
+      .delete{
+        display: none;
+        span{
+        }
+      }
+      .share{
+        .shareTitle{
+          font-size:30px;
+        }
+        a{
+        }
+        p{
+        }
+        .Vertical{
+        }
+        .s-facebook{
+        }
+        .s-twitter{
+        }
+        .s-line{
+        }
+      }
+    }
+  }
+  .page{
+    display: none;
+  }
+  .last{
+    display: none;
+  }
+  .first{
+    display: none;
+  }
+  .next,.prev{
+    width: 200px;
+    background: black;
+    opacity: 0.9;
+    a{
+      color: white;
+    }
+  }
+  .sns{
+    .snsMenu{
+      margin: 0 auto;
+      width: 100%;
+
+      .pixiv{
+        margin-right: 0;
+      }
+      .btn{
+        margin-bottom: 10px;
+        opacity: inherit;
+        width: 80%;
+        background: black;
+      }
+    }
+  }
+  .mail{
+    opacity: 1;
+    .menu{
+      margin: 20px 0;
+      width: 90%;
+      padding: 0 40px;
+      font-size: 30px;
+      text-align: center;
+      height: 80px;
+      .japanFont{
+        display: none;
+      }
+    }
+    .mail_wrapper{
+      margin: 0 auto;
+      text-align: center;
+      padding:0;
+      .labelegal_entity,.individual{
+        padding: 0;
+        textarea{
+        }
+      }
+    }
+  }
+}
 
 @media(max-width: 600px){
   h1{
@@ -179,163 +335,6 @@
       padding: 0;
       text-align: center;
       height: 80px;
-    }
-    .mail_wrapper{
-      margin: 0 auto;
-      text-align: center;
-      padding:0;
-      .labelegal_entity,.individual{
-        padding: 0;
-        textarea{
-        }
-      }
-    }
-  }
-}
-
-@media(max-width: 1000px){
-  .topScroll{
-    .fas,.far{
-      font-size: 60px;
-      color:white;
-    }
-  }
-  .header{
-    .menu{
-      font-size: 20px;
-      padding: 20px 40px;
-    }
-  }
-  .create{
-    display: none;
-  }
-  .topimage{
-    height: 350px;
-    .backimage{
-      .background{
-        font-size: 1100%;
-        &:nth-child(1){
-          background-size:200px 354px;
-          background-position:60% 30%;
-        }
-        &:nth-child(2){
-          background-size:400px 565px;
-          background-position:57% 0%;
-        }
-        &:nth-child(3){
-          background-size:200px 304px;
-          background-position:70% 70%;
-        }
-        &:nth-child(4){
-          background-size:500px 500px;
-          background-position:55% -10%;
-        }
-        &:nth-child(5){
-          background-size:600px 400px;
-          background-position:30% 0%;
-        }
-      }
-    }
-  }
-  .illust{
-    .illust-container{
-      width: 25%;
-      .illust-content{
-        height: 200px;
-        .content{
-          width: 150px;
-          height:150px;
-        }
-      }
-    }
-    .fullimage{
-      .fullillust{
-      }
-      .close{
-        background: rgba(220,220,220,0.7);
-        border-radius: 20px;
-        height: 100px;
-        width:120px;
-        position: absolute;
-        top:70%;
-        right:5%;
-        z-index: 30;
-        .fa-times{
-          font-size: 100px;
-          position: absolute;
-
-        }
-      }
-
-      .delete{
-        display: none;
-        span{
-        }
-      }
-      .share{
-        .shareTitle{
-          font-size:30px;
-        }
-        a{
-        }
-        p{
-        }
-        .Vertical{
-        }
-        .s-facebook{
-        }
-        .s-twitter{
-        }
-        .s-line{
-        }
-      }
-    }
-  }
-  .page{
-    display: none;
-  }
-  .last{
-    display: none;
-  }
-  .first{
-    display: none;
-  }
-  .next,.prev{
-    width: 200px;
-    background: black;
-    opacity: 0.9;
-    a{
-      color: white;
-    }
-  }
-  .sns{
-    .snsMenu{
-      margin: 0 auto;
-      width: 100%;
-
-      .pixiv{
-        margin-right: 0;
-      }
-      .btn{
-        margin-bottom: 10px;
-        opacity: inherit;
-        width: 80%;
-        background: black;
-      }
-    }
-  }
-  .mail{
-    opacity: 1;
-    .menu{
-      margin: 20px 0;
-      width: 90%;
-      padding: 0 40px;
-      font-size: 30px;
-      text-align: center;
-      height: 80px;
-      .japanFont{
-        display: none;
-      }
     }
     .mail_wrapper{
       margin: 0 auto;

@@ -4,6 +4,8 @@ class HomeController < ApplicationController
   def top
     @contact = Contact.new
     @illust = Illust.new
+    @tag = Tag.new
+    @tags = Tag.all
     @illusts = Illust.page(params[:page]).per(20)
     respond_to do |format|
       format.html
@@ -26,9 +28,14 @@ class HomeController < ApplicationController
   end
 
 
-  def create
+  def createIllust
     @illust = Illust.new(illust_params)
     @illust.save
+    redirect_to '/'
+  end
+  def createTag
+    @tag = Tag.new(tag_params)
+    @tag.save
     redirect_to '/'
   end
   def delete
@@ -41,7 +48,10 @@ class HomeController < ApplicationController
       params.require(:contact).permit(:email,:budget,:content)
     end
     def illust_params
-      params.require(:illust).permit(:name,:avatar,:fullimage)
+      params.require(:illust).permit(:name,:avatar,:fullimage,categories: [])
+    end
+    def tag_params
+      params.require(:tag).permit(:category)
     end
     def admin_user
       redirect_to(root_url) unless current_user
