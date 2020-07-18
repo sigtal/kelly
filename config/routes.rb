@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   post '/', to: 'home#contact'
   post '/createillust', to: 'home#createIllust'
   post '/createtag', to: 'home#createTag'
+  get '/:category', to:'home#selectTag'
   delete '/:id', to: 'home#delete'
   get 'post/:id', to: 'post#show'
   root 'home#top'

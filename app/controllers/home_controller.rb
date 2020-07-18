@@ -26,8 +26,6 @@ class HomeController < ApplicationController
       end
     end
   end
-
-
   def createIllust
     @illust = Illust.new(illust_params)
     @illust.save
@@ -42,6 +40,13 @@ class HomeController < ApplicationController
     @illust = Illust.find_by(id: params[:id])
     @illust.destroy
     redirect_to '/'
+  end
+  def selectTag
+    @illusts = Illust.where("categories LIKE ?", "%#{params[:category]}%").page(params[:page]).per(20)
+    respond_to do |format|
+      format.html
+      format.js { render 'shared/pagination'}
+    end
   end
   private
     def contact_params
