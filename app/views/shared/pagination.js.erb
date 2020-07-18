@@ -1,4 +1,5 @@
 document.getElementById("illust-container").innerHTML = "<%= escape_javascript(render 'layouts/illust') %>";
+document.getElementById("tag").innerHTML = "<%= escape_javascript(render 'layouts/tag') %>";
 document.querySelectorAll('.illust-container').forEach(function(illust){
   var image = illust.children[0].children[0].children[0];
   var fullImage = illust.nextElementSibling;

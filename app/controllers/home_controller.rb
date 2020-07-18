@@ -43,6 +43,8 @@ class HomeController < ApplicationController
   end
   def selectTag
     @illusts = Illust.where("categories LIKE ?", "%#{params[:category]}%").page(params[:page]).per(20)
+    @tags = Tag.all
+    @select = Tag.find_by(category: params[:category])
     respond_to do |format|
       format.html
       format.js { render 'shared/pagination'}

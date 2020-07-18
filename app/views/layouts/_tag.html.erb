@@ -1,3 +1,9 @@
-<% @tags.each do |tag| %>
-  <%= link_to tag.category, tag.category , remote: true %>
-<% end %>
+<div class="tag" id="tag">
+  <% @tags.each do |tag| %>
+    <% if tag == @select %>
+      <span><%= tag.category %></span>
+    <% else %>
+      <%= link_to tag.category, tag.category , remote: true %>
+    <% end %>
+  <% end %>
+</div>

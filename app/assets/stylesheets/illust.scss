@@ -1,5 +1,30 @@
 .illust{
   width:100%;
+  .tag{
+    font-family: 'Coiny', cursive;
+    padding: 30px;
+    span{
+      padding: 10px;
+      margin: 0 5px;
+      color: white;
+      background: black;
+      text-decoration: none;
+      opacity: 1;
+      border-radius: 4px;
+    }
+    a{
+      padding: 10px;
+      margin: 0 5px;
+      color: white;
+      background: black;
+      text-decoration: none;
+      opacity: 0.56;
+      border-radius: 4px;
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
   h1{
     font-family: 'Coiny', cursive;
     padding: 0px 100px;
@@ -8,7 +33,7 @@
   .illust-container{
     width:20%;
     float:left;
-    margin: 0 auto;
+    margin: 0px auto;
     text-align: center;
     .illust-content{
       height:300px;
