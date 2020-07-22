@@ -9,11 +9,10 @@ module ApplicationHelper
     keywords: 'イラスト,イラスト素材,Kelly',
     canonical: request.original_url,
     noindex: ! Rails.env.production?,
-    # 後でちゃんとやること！！いいな？
-    # icon: [
-      # { href: image_url('favicon.ico') },
-      # { href: image_url('icon.jpg'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/jpg' },
-    # ],
+    icon: [
+      { href: image_url('favicon.jpg') },
+      { href: image_url('appleIcon.jpg'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/jpg' },
+    ],
     og: {
       site_name: 'illustrator-kelly',
       title: 'kelly',
@@ -26,10 +25,10 @@ module ApplicationHelper
     twitter: {
       card: 'summary_large_image',
       site: '@kelly_dog_cat',
+    },
+    fb: {
+      app_id: '2667908266871495'
     }
-    # fb: {
-    #   app_id: '自身のfacebookのapplication ID'
-    # }
   }
   end
 end
