@@ -1,8 +1,10 @@
+@import "variables";
+
 .create{
   width: 90%;
   margin: 0 auto;
   height: 600px;
-  font-family: 'Coiny', cursive;
+  font-family: $famiry;
   background-color: rgba(0,0,0,0.56);
   padding:10px 15px;
   border-radius: 20px;

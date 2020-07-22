@@ -1,3 +1,5 @@
+@import "variables";
+
 .menu{
   position: relative;
   display: inline-block;
@@ -10,7 +12,7 @@
   overflow: hidden;
   transition: 0.2s;
   margin: 0 20px;
-  font-family: 'Coiny', cursive;
+  font-family: $famiry;
   cursor: pointer;
   // box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.4) ;
   // background: white;
@@ -73,11 +75,12 @@
 }
 
 .mail{
-  font-family: 'Coiny', cursive;
-  margin-bottom: 100px;
+  font-family: $famiry;
+  padding-bottom: 200px;
+  background-image: linear-gradient(rgba(255,255,255,0) 10%,rgba(255,255,255,0.3) 20%,rgba(255,255,255,0.7) 30%,rgba(255,255,255,10) 100% );
 }
 .mail h1{
-  font-family: 'Coiny', cursive;
+  font-family: $famiry;
   padding: 0px 100px;
   opacity: 0.49;
 }
@@ -132,7 +135,7 @@ visibility: hidden;
   width:90%;
 }
 .copy-text{
-  font-family: 'Coiny', cursive;
+  font-family: $famiry;
 
 }
 .send{

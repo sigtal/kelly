@@ -1,7 +1,8 @@
+@import "variables";
 .sns{
   padding-top:100px;
   display:block;
-  font-family: 'Coiny', cursive;
+  font-family: $famiry;
   height: 600px;
   .snsMenu{
     text-align: center;
@@ -12,6 +13,8 @@
       background-color: black;
       .pixiv-icon{
         height:30px;
+        vertical-align: middle;
+        padding-bottom: 4px;
       }
     }
     .twitter {
