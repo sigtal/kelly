@@ -18,4 +18,7 @@ document.addEventListener('turbolinks:load', function(){
     }
   }
   fileInput.addEventListener('change', handleFileSelect);
+  // fileInput.addEventListener('change', function(){
+  //
+  // });
 });

@@ -12,6 +12,15 @@
     width:33.2%;
     float: left;
     color: white;
+    .fullimage-postCss{
+      background: black;
+      opacity: 0.56;
+      color:white;
+      font-size: 10px;
+      border-radius: 10px;
+      padding: 10px;
+      margin-top: 20px;
+    }
     img{
       width: 100%;
     }
@@ -115,6 +124,31 @@
         opacity: 0.56;
         z-index: 50;
         cursor:nwse-resize;
+    }
+  }
+  .createTag{
+    float: right;
+    width: 33%;
+    .newCategory{
+      font-size:10px;
+      color: white;
+      background-color: black;
+      border: 10px rgba(0,0,0,0.7) solid;
+      border-radius: 20px;
+      opacity: 0.56;
+    }
+  }
+  .btn{
+    padding: 8px 24px;
+    color: white;
+    background: black;
+    display: inline-block;
+    opacity: 0.56;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 10px;
+    &:hover {
+      opacity: 1;
     }
   }
 }
