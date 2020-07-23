@@ -24,8 +24,7 @@ document.addEventListener('turbolinks:load', function(){
   });
 });
 
-
-function imageResize (){
+export default function imageResize (){
   document.querySelectorAll('.illust-container').forEach(function(illust){
     var image = illust.children[0].children[0].children[0];
     var fullImage = illust.nextElementSibling;

@@ -4,7 +4,9 @@
       <div class="illust-container">
         <div class="illust-content">
           <div class="content">
-            <%= image_tag url_for(illust.avatar), class: 'illustavatar' %>
+            <canvas id="canvas" width="200" height="200"></canvas>
+            <%= hidden_field_tag "thumbSize",illust.thumb %>
+            <%= image_tag illust.fullimage,style: "display:none" %>
           </div>
         </div>
       </div>

@@ -1,5 +1,20 @@
 document.getElementById("illust-container").innerHTML = "<%= escape_javascript(render 'layouts/illust') %>";
 document.getElementById("tag").innerHTML = "<%= escape_javascript(render 'layouts/tag') %>";
+
+var content = document.querySelectorAll(".content")
+content.forEach(function(thumbContent){
+  var canvas = thumbContent.children[0]
+  var thumbSize = thumbContent.children[1].value.split(',')
+  var originImage = thumbContent.children[2]
+  var ctx = canvas.getContext('2d');
+  originImage.addEventListener("load",function(){
+    canvas.width = thumbSize[2];
+    canvas.height = thumbSize[3];
+    ctx.drawImage(originImage,thumbSize[0],thumbSize[1],thumbSize[2],thumbSize[3],0,0,thumbSize[2],thumbSize[3])
+    canvas.style.width = '150px'
+    canvas.style.height = '150px'
+  });
+});
 document.querySelectorAll('.illust-container').forEach(function(illust){
   var image = illust.children[0].children[0].children[0];
   var fullImage = illust.nextElementSibling;

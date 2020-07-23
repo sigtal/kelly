@@ -1,17 +1,35 @@
 <div class="illust-post-form" id="illust-post-form">
   <%= form_with model: @illust,url: { action: "createIllust" } do |form| %>
     <div class="post-list">
-      <%= form.label :avatar ,class: 'illust-post-label' %>
-      <%= form.file_field :avatar, id: 'avatar-post' %>
-      <br>
-      <img id="avatar-illust" alt="">
-    </div>
-      <div class="post-list">
       <%= form.label :fullimage,class: 'illust-post-label' %>
       <%= form.file_field :fullimage, id: 'fullimage-post' %>
       <br>
       <img id="fullimage-illust" alt="">
     </div>
+    <button type="button" name="button" id="trimmingStart">trimming for thumbnail</button>
+    <div class="trimming" id="trimming">
+      <img src="" alt="" class="trimmingTarget" id="trimmingTarget">
+      <div id="dust" class="dust"></div>
+      <span id="mini" class="mini"></span>
+      <div class="edit" id="edit">
+        <input type="radio" name="edit" value="" id="radioZoom">
+        <label class="zoom" id="zoom" for="radioZoom">
+          <span class="fas fa-search-plus"></span>
+          <span class="fas fa-search-minus"></span>
+          Zoom in/out
+        </label>
+        <br>
+        <input type="radio" name="edit" value="" id="radioMove">
+        <label class="move" id="move" for="radioMove">
+          <span class="fas fa-arrows-alt"></span>
+          Move
+        </label>
+      </div>
+      <span class="fas fa-border-style" id="zoomBorder"></span>
+      <canvas id="canvas" width="300" height="300"></canvas>
+      <button type="button" name="button" id="decision" class="decision"><span class="fas fa-chevron-circle-right"></span>Decision</button>
+    </div>
+    <%= form.hidden_field :thumb, id: 'thumbSize-post' %>
     <div class="post-list">
       <% @tags.each do |tag| %>
         <%= form.check_box :categories,{multiple: true}, tag.category,nil  %>

@@ -55,7 +55,7 @@ class HomeController < ApplicationController
       params.require(:contact).permit(:email,:budget,:content)
     end
     def illust_params
-      params.require(:illust).permit(:name,:avatar,:fullimage,categories: [])
+      params.require(:illust).permit(:name,:fullimage,:thumb, categories: [])
     end
     def tag_params
       params.require(:tag).permit(:category)
