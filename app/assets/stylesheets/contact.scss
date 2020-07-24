@@ -19,6 +19,17 @@
     background: black;
     transition-delay: 1s;
   }
+  p{
+    margin: 0;
+    .fas{
+      display: none;
+      color: black;
+    }
+    .menuTitle{
+      font-weight: lighter;
+    }
+  }
+
   span{
     position: absolute;
     display: block;
@@ -82,9 +93,12 @@
   padding: 0px 100px;
   opacity: 0.49;
 }
+.explainToJapanise{
+  font-size: 25px;
+}
 .mail p{
-  font-size: 30px;
   opacity: 0.8;
+
 }
 .mail_wrapper{
   padding: 0 150px;
@@ -103,9 +117,9 @@ position: absolute;
 visibility: hidden;
 }
 .japanFont{
-  font-size: 20px;
-  font-family: 'Kosugi Maru', sans-serif;
+  font-family: $japanFont;
 }
+
 .label{
   text-align:center;
 }
@@ -146,4 +160,8 @@ visibility: hidden;
 }
 .brTypeResposive{
   display: none;
+}
+.errors{
+  list-style: none;
+  color: #0054a3;
 }

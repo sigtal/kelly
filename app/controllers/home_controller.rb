@@ -63,8 +63,12 @@ class HomeController < ApplicationController
       params.require(:illust).permit(:name,:fullimage,:thumb, categories: [])
     end
     def cotents_part
-      # request.env["HTTP_USER_AGENT"]
-      return 2
+      mobile = request.env["HTTP_USER_AGENT"]
+      if(mobile.include?('Mobile') || mobile.include?('Android'))
+        return 8
+      else
+        return 12
+      end
     end
     def admin_user
       redirect_to(root_url) unless current_user
