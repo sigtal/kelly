@@ -6,7 +6,7 @@
           <div class="content">
             <canvas id="canvas" width="200" height="200"></canvas>
             <%= hidden_field_tag "thumbSize",illust.thumb %>
-            <%= image_tag illust.fullimage,style: "display:none" %>
+            <%= image_tag illust.fullimage,style: "display:none",alt: "illustrator kelly #{illust.name}" %>
           </div>
         </div>
       </div>
@@ -33,7 +33,7 @@
             <% end %>
           </div>
           <% end %>
-        <%= image_tag illust.fullimage ,class: 'fullillust',id: 'fullimage' %>
+        <%= image_tag illust.fullimage ,class: 'fullillust',id: 'fullimage' ,alt: "illustrator kelly #{illust.name}" %>
       </div>
     <% end %>
   <div class="clear" />

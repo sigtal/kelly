@@ -11,10 +11,7 @@
         <span class="border4"></span>
         <p>
           <span class="fas fa-building"></span>
-          <p class="menuTitle">Corporate use</p>
-          <span class="japanFont">
-            &nbsp;&nbsp;（法人利用）
-          </span>
+          <p class="menuTitle">Corporate use<span class="japanFont">（法人利用）</span></p>
         </p>
 
       </label>
@@ -26,10 +23,7 @@
         <span class="border4"></span>
         <p>
           <span class="fas fa-user"></span>
-          <p>Personal use</p>
-          <span class="japanFont">
-            &nbsp;&nbsp;（個人利用）
-          </span>
+          <p>Personal use<span class="japanFont">（個人利用）</span></p>
         </p>
       </label>
     <!-- 法人向け依頼方法 -->
@@ -60,6 +54,7 @@
           </span>
         </p>
         <%= form.text_area :content, class: :textarea, id: :textarea1,onchange: "textAreaHeightSet(this)",oninput: "textAreaHeightSet(this)"  %>
+        <br>
         <button type="submit" class="menu menuFontSize send">
           <span class="border1"></span>
           <span class="border2"></span>

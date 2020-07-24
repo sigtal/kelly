@@ -8,6 +8,11 @@
         <%= form.file_field :fullimage, id: 'fullimage-post',class: 'fullimage-post',style: 'display:none;' %>
       </label>
       <br>
+      <div class="" style="margin-top:10px;">
+        <%= form.label :name,class: 'illust-post-label' %>
+        <%= form.text_field :name,class:'newCategory' %>
+      </div>
+      <br>
       <img id="fullimage-illust" alt="">
     </div>
     <button type="button" name="button" id="trimmingStart" class="btn">trimming for thumbnail</button>
