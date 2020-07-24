@@ -1,3 +1,29 @@
 // Place all the styles related to the Post controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+@import "variables";
+
+.showPageimage{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.backButton{
+  font-family: $famiry;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  text-decoration:none;
+  color: white;
+  background: black;
+  opacity: 0.56;
+  border-radius: 10px;
+  padding: 5px;
+  &:hover{
+    opacity: 0.9;
+  }
+}

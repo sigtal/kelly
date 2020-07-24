@@ -18,7 +18,8 @@ document.addEventListener('turbolinks:load', function(){
     }
   }
   fileInput.addEventListener('change', handleFileSelect);
-  // fileInput.addEventListener('change', function(){
-  //
-  // });
+  fileInput.addEventListener('change', function(){
+    var post = document.getElementById("fullimage-postCss")
+    post.style.opacity = 1;
+  });
 });
