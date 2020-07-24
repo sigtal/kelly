@@ -63,7 +63,7 @@ class HomeController < ApplicationController
       params.require(:illust).permit(:name,:fullimage,:thumb, categories: [])
     end
     def cotents_part
-      request.env["HTTP_USER_AGENT"]
+      # request.env["HTTP_USER_AGENT"]
       return 2
     end
     def admin_user

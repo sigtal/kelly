@@ -6,30 +6,38 @@
   height: 600px;
   .snsMenu{
     text-align: center;
-    .fa{
-       margin-right:5px;
-    }
-    .pixiv {
-      background-color: black;
-      .pixiv-icon{
-        height:30px;
-        vertical-align: middle;
-        padding-bottom: 4px;
+    .snsContainer{
+      width: 50%;
+      float:left;
+      .pixiv {
+        background-color: black;
+        .pixiv-icon{
+          height:100px;
+          vertical-align: middle;
+          padding-bottom: 4px;
+        }
       }
-    }
-    .twitter {
-      background-color: black;
-    }
-    .btn{
-      padding: 8px 24px;
-      color: white;
-      display: inline-block;
-      opacity: 0.56;
-      border-radius: 4px;
-      text-decoration: none;
-      font-size: 30px;
-      &:hover {
-        opacity: 1;
+      .twitter {
+        background-color: black;
+        .twitter-icon{
+          height: 100px;
+          vertical-align: middle;
+          padding-bottom: 4px;
+        }
+      }
+      .btn{
+        width: 30%;
+        height: 150px;
+        padding: 8px 24px;
+        color: white;
+        display: inline-block;
+        opacity: 0.56;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 30px;
+        &:hover {
+          opacity: 1;
+        }
       }
     }
   }

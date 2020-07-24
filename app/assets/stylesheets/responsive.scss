@@ -126,15 +126,16 @@
     .snsMenu{
       margin: 0 auto;
       width: 100%;
-
-      .pixiv{
-        margin-right: 0;
-      }
-      .btn{
-        margin-bottom: 10px;
-        opacity: inherit;
-        width: 80%;
-        background: black;
+      .snsContainer{
+        width:50%;
+        .pixiv{
+          margin-right: 0;
+        }
+        .btn{
+          opacity: inherit;
+          width: 30%;
+          background: black;
+        }
       }
     }
   }
@@ -271,7 +272,7 @@
         color:white;
         position: absolute;
         z-index: 30;
-        bottom:0;
+        bottom: 0;
         .shareTitle{
           font-size:30px;
         }
@@ -280,6 +281,7 @@
           text-align: center;
           margin: 0 auto;
           text-decoration: none;
+          font-size: 20px;
         }
         p{
           display: inline;
@@ -289,16 +291,16 @@
         }
         .s-facebook{
           color:white;
-          width:33%
+          width:40%
         }
         .s-twitter{
           color:white;
-          width:33%
+          width:30%
         }
         .s-line{
           display: block;
           color:white;
-          width:33%
+          width:30%
         }
       }
     }
@@ -324,16 +326,12 @@
     .snsMenu{
       margin: 0 auto;
       width: 100%;
-
-      .pixiv{
-        margin-right: 0;
-      }
-      .btn{
-        margin-bottom: 10px;
-        opacity: inherit;
-        width: 60%;
-        background: black;
-        font-size: 20px;
+      .snsContainer{
+        width: 50%;
+        .btn{
+          margin-bottom: 10px;
+          width: 70%;
+        }
       }
     }
   }
