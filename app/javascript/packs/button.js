@@ -7,6 +7,7 @@ document.addEventListener('turbolinks:load', function(){
     if (radio[0].checked) {
       labelegal_entity.style.display = "block";
       individual.style.display = "none";
+      scroll(window.pageYOffset + labelegal_entity.getBoundingClientRect().top)
     };
   });
 
@@ -15,6 +16,7 @@ document.addEventListener('turbolinks:load', function(){
     if(radio[1].checked) {
       individual.style.display = "block";
       labelegal_entity.style.display = "none";
+      scroll(window.pageYOffset + individual.getBoundingClientRect().top)
     };
   });
 
@@ -24,5 +26,11 @@ document.addEventListener('turbolinks:load', function(){
     document.execCommand("Copy");
     document.getElementById("alert").innerHTML = "Copied<span class='japanFont'>（コピーしました）</span>";
   });
-
+  function scroll(top){
+    console.log(top)
+    window.scrollTo({
+      top: top,
+      behavior: "smooth"
+    })
+  };
 });

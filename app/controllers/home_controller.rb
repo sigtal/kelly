@@ -1,12 +1,13 @@
 class HomeController < ApplicationController
   before_action :admin_user, only: [:create,:delete]
+  @cotents = 2
 
   def top
     @contact = Contact.new
     @illust = Illust.new
     @tag = Tag.new
     @tags = Tag.all
-    @illusts = Illust.page(params[:page]).per(20)
+    @illusts = Illust.page(params[:page]).per(cotents_part)
     respond_to do |format|
       format.html
       format.js { render 'shared/pagination'}
@@ -42,7 +43,11 @@ class HomeController < ApplicationController
     redirect_to '/'
   end
   def selectTag
-    @illusts = Illust.where("categories LIKE ?", "%#{params[:category]}%").page(params[:page]).per(20)
+    if params[:categories] == "all"
+      @illusts = Illust.page(params[:page]).per(cotents_part)
+    else
+      @illusts = Illust.where("categories LIKE ?", "%#{params[:category]}%").page(params[:page]).per(cotents_part)
+    end
     @tags = Tag.all
     @select = Tag.find_by(category: params[:category])
     respond_to do |format|
@@ -57,8 +62,9 @@ class HomeController < ApplicationController
     def illust_params
       params.require(:illust).permit(:name,:fullimage,:thumb, categories: [])
     end
-    def tag_params
-      params.require(:tag).permit(:category)
+    def cotents_part
+      request.env["HTTP_USER_AGENT"]
+      return 2
     end
     def admin_user
       redirect_to(root_url) unless current_user

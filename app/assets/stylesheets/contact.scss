@@ -117,12 +117,15 @@ visibility: hidden;
   background-color: black;
   color: white;
 }
+.input{
+  width: 70%;
+}
 .input,.textarea{
   font-size:25px;
   color: white;
   background-color: black;
   border: 10px rgba(0,0,0,0.7) solid;
-  border-radius: 20px;
+  border-radius: 4px;
   opacity: 0.56;
 
 }
@@ -139,4 +142,8 @@ visibility: hidden;
 .send{
   background-color:transparent;
   border:none;
+  margin-top: 40px;
+}
+.brTypeResposive{
+  display: none;
 }

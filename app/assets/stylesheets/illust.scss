@@ -2,6 +2,7 @@
 
 .illust{
   width:100%;
+  margin-top: 250px;
   .tag{
     font-family: $famiry;
     padding: 30px;
@@ -100,6 +101,7 @@
     .share{
       font-size: 100px;
       position: absolute;
+      bottom: 0;
       z-index: 30;
       p{
         display: none;

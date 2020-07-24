@@ -11,8 +11,8 @@ content.forEach(function(thumbContent){
     canvas.width = thumbSize[2];
     canvas.height = thumbSize[3];
     ctx.drawImage(originImage,thumbSize[0],thumbSize[1],thumbSize[2],thumbSize[3],0,0,thumbSize[2],thumbSize[3])
-    canvas.style.width = '150px'
-    canvas.style.height = '150px'
+    canvas.style.width = '100%'
+    canvas.style.height = '100%'
   });
 });
 document.querySelectorAll('.illust-container').forEach(function(illust){
