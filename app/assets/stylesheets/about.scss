@@ -21,12 +21,12 @@
       cursor:default;
       font-family: 'Monoton', cursive;
       &:nth-child(1){
-        background-image: image-url("星.jpg");
+        background-image: image-url('star.jpg');
         background-size:338px 600px;
         background-position:60% 90%;
       }
       &:nth-child(2){
-        background-image: image-url("新年.jpg");
+        background-image: image-url("newyear.jpg");
         background-size:849px 1200px;
         background-position:50% 10%;
       }
@@ -36,12 +36,12 @@
         background-position:100% 70%;
       }
       &:nth-child(4){
-        background-image: image-url("315876.jpg")
+        background-image: image-url("315876.jpg");
         background-size:1002px 1002px;
         background-position:55% 0%;
       }
       &:nth-child(5){
-        background-image: image-url("明けましておめでとうございます。.jpg");
+        background-image: image-url("happyNewYear.jpg");
         background-size:1200px 800px;
         background-position:25% -10%;
       }
