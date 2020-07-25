@@ -56,6 +56,8 @@ gem 'dotenv-rails'
 
 group :production do
   gem 'mysql2'
+  gem 'unicorn'
+  gem 'unicorn-rails'
 end
 
 gem 'aws-sdk-s3', require: false
