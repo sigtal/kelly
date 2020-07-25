@@ -21,13 +21,17 @@ document.addEventListener('turbolinks:load', function(){
   });
 
   // コピーボタン
-  document.getElementById("copyTrigger").addEventListener('click', function(){
-    document.getElementById("copyTarget").select();
-    document.execCommand("Copy");
-    document.getElementById("alert").innerHTML = "Copied<span class='japanFont'>（コピーしました）</span>";
-  });
+  // document.getElementById("copyTrigger").addEventListener('click', function(){
+  //   var target1 = document.getElementById("copyTarget1").select();
+  //   // var text = document.createElement("textarea");
+  //   // text.value = `連絡先メールアドレス:${target1.value}\nお問い合わせ内容:${copyTarget2.value}`;
+  //   // document.body.appendChild(text);
+  //   // text.select();
+  //   document.execCommand("Copy");
+  //   // text.style.display = "none";
+  //   document.getElementById("alert").innerHTML = "Copied<span class='japanFont'>（コピーしました）</span>";
+  // });
   function scroll(top){
-    console.log(top)
     window.scrollTo({
       top: top,
       behavior: "smooth"
