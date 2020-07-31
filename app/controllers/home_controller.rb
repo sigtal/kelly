@@ -62,6 +62,9 @@ class HomeController < ApplicationController
     def illust_params
       params.require(:illust).permit(:name,:fullimage,:thumb, categories: [])
     end
+    def tag_params
+      params.require(:tag).permit(:category)
+    end
     def cotents_part
       mobile = request.env["HTTP_USER_AGENT"]
       if(mobile.include?('Mobile') || mobile.include?('Android'))
