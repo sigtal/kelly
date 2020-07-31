@@ -37,9 +37,14 @@ class HomeController < ApplicationController
     @tag.save
     redirect_to '/'
   end
-  def delete
+  def deleteIllust
     @illust = Illust.find_by(id: params[:id])
     @illust.destroy
+    redirect_to '/'
+  end
+  def deleteTag
+    @tag = Tag.find_by(id: params[:id])
+    @tag.destroy
     redirect_to '/'
   end
   def selectTag

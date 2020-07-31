@@ -28,7 +28,7 @@
         <% if logged_in? %>
           <!-- 削除フォーム -->
           <div class="delete">
-            <%= link_to "/#{illust.id}", :method => :delete,  data: { confirm: 'Are you sure?' } do %>
+            <%= link_to "/illust/#{illust.id}", :method => :delete,  data: { confirm: 'Are you sure?' } do %>
               <span class="fas fa-trash-alt"></span>
             <% end %>
           </div>

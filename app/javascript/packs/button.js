@@ -37,4 +37,14 @@ document.addEventListener('turbolinks:load', function(){
       behavior: "smooth"
     })
   };
+
+  var tagDeleteButto = document.getElementById("tagDeleteButto")
+  var tagDelete = document.getElementById("tagDelete")
+  tagDeleteButto.addEventListener("click",function(){
+    tagDelete.style.display = "block"
+    var tagDeleteClose = document.getElementById("tagDeleteClose")
+    tagDeleteClose.addEventListener("click",function(){
+      tagDelete.style.display = "none"
+    })
+  })
 });

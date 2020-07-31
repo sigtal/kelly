@@ -51,4 +51,8 @@
     <%= form.text_field :category,class: 'newCategory' %>
     <%= form.submit class:'btn' %>
   <% end %>
+  <button type="button" name="button" class="btn" id="tagDeleteButto">Tag Delete</button>
+  <div class="tagDelete" id="tagDelete">
+    <%= render 'layouts/deletetag' %>
+  </div>
 </div>
