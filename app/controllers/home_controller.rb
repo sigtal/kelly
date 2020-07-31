@@ -51,7 +51,8 @@ class HomeController < ApplicationController
     if params[:categories] == "all"
       @illusts = Illust.page(params[:page]).per(cotents_part)
     else
-      @illusts = Illust.where("categories LIKE ?", "%#{params[:category]}%").page(params[:page]).per(cotents_part)
+      @tag = Tag.find_by(category: params[:category])
+      @illusts = Illust.where("categories LIKE ?", "%#{@tag.category}#{@tag.id}%").page(params[:page]).per(cotents_part)
     end
     @tags = Tag.all
     @select = Tag.find_by(category: params[:category])
