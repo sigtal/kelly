@@ -1,167 +1,169 @@
 @import "variables";
 
-.menu{
-  position: relative;
-  display: inline-block;
-  padding: 30px 60px;
-  color: black;
-  letter-spacing: 4px;
-  text-decoration: none;
-  box-shadow: 0 0 0 100px rgba(220,220,220,0.5) inset;
-  font-size: 24px;
-  overflow: hidden;
-  transition: 0.2s;
-  margin: 0 20px;
-  font-family: $famiry;
-  cursor: pointer;
-  &:hover{
+  .menu{
+    position: relative;
+    display: inline-block;
+    padding: 30px 60px;
+    color: black;
+    letter-spacing: 4px;
+    text-decoration: none;
+    box-shadow: 0 0 0 100px rgba(220,220,220,0.5) inset;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+    margin: 0 20px;
+    height: 65px;
+    font-family: $famiry;
+    cursor: pointer;
+    &:hover{
+      color: white;
+      background: black;
+      transition-delay: 1s;
+    }
+    p{
+      margin: 0;
+      .fas{
+        display: none;
+        color: black;
+      }
+      .menuTitle{
+        font-weight: lighter;
+      }
+    }
+
+    span{
+      position: absolute;
+      display: block;
+    }
+    .border1{
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg,transparent,black);
+    }
+    .border2{
+      top: -100%;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg,transparent,black);
+    }
+    .border3{
+      bottom: 0;
+      right: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(270deg,transparent,black);
+    }
+    .border4{
+      bottom: -100%;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(360deg,transparent,black);
+    }
+    &:hover .border1{
+      left: 100%;
+      transition: 1s;
+    }
+    &:hover .border2{
+      top: 100%;
+      transition: 1s;
+      transition-delay:0.25s
+    }
+    &:hover .border3{
+      right: 100%;
+      transition: 1s;
+      transition-delay:0.5s
+    }
+    &:hover .border4{
+      bottom: 100%;
+      transition: 1s;
+      transition-delay:0.75s
+    }
+  }
+
+  .mail{
+    font-family: $famiry;
+    padding-bottom: 200px;
+    background-image: linear-gradient(rgba(255,255,255,0) 10%,rgba(255,255,255,0.3) 20%,rgba(255,255,255,0.7) 30%,rgba(255,255,255,10) 100% );
+  }
+  .mail h1{
+    font-family: $famiry;
+    padding: 0px 100px;
+    opacity: 0.49;
+  }
+  .explainToJapanise{
+    font-size: 25px;
+  }
+  .mail p{
+    opacity: 0.8;
+
+  }
+  .mail_wrapper{
+    padding: 0 150px;
+  }
+  .labelegal_entity{
+    display: none;
+  }
+  .individual{
+    display: none;
+  }
+  .labelegal_entity,.individual{
+    padding-left:100px;
+  }
+  input[type=radio]{
+  position: absolute;
+  visibility: hidden;
+  }
+  .japanFont{
+    font-family: $japanFont;
+  }
+
+  .label{
+    text-align:center;
+  }
+  #corporate[type=radio]:checked ~ .label1{
+    background-color: black;
     color: white;
-    background: black;
-    transition-delay: 1s;
   }
-  p{
-    margin: 0;
-    .fas{
-      display: none;
-      color: black;
-    }
-    .menuTitle{
-      font-weight: lighter;
-    }
+  #personal[type=radio]:checked ~ .label2{
+    background-color: black;
+    color: white;
   }
+  .input{
+    width: 70%;
+  }
+  .input,.textarea{
+    font-size:25px;
+    color: white;
+    background-color: black;
+    border: 10px rgba(0,0,0,0.7) solid;
+    border-radius: 4px;
+    opacity: 0.56;
 
-  span{
-    position: absolute;
-    display: block;
   }
-  .border1{
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg,transparent,black);
+  .input:focus,.textarea:focus{
+    opacity: 1;
   }
-  .border2{
-    top: -100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg,transparent,black);
+  .textarea{
+    width:90%;
   }
-  .border3{
-    bottom: 0;
-    right: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(270deg,transparent,black);
-  }
-  .border4{
-    bottom: -100%;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(360deg,transparent,black);
-  }
-  &:hover .border1{
-    left: 100%;
-    transition: 1s;
-  }
-  &:hover .border2{
-    top: 100%;
-    transition: 1s;
-    transition-delay:0.25s
-  }
-  &:hover .border3{
-    right: 100%;
-    transition: 1s;
-    transition-delay:0.5s
-  }
-  &:hover .border4{
-    bottom: 100%;
-    transition: 1s;
-    transition-delay:0.75s
-  }
-}
+  .copy-text{
+    font-family: $famiry;
 
-.mail{
-  font-family: $famiry;
-  padding-bottom: 200px;
-  background-image: linear-gradient(rgba(255,255,255,0) 10%,rgba(255,255,255,0.3) 20%,rgba(255,255,255,0.7) 30%,rgba(255,255,255,10) 100% );
-}
-.mail h1{
-  font-family: $famiry;
-  padding: 0px 100px;
-  opacity: 0.49;
-}
-.explainToJapanise{
-  font-size: 25px;
-}
-.mail p{
-  opacity: 0.8;
-
-}
-.mail_wrapper{
-  padding: 0 150px;
-}
-.labelegal_entity{
-  display: none;
-}
-.individual{
-  display: none;
-}
-.labelegal_entity,.individual{
-  padding-left:100px;
-}
-input[type=radio]{
-position: absolute;
-visibility: hidden;
-}
-.japanFont{
-  font-family: $japanFont;
-}
-
-.label{
-  text-align:center;
-}
-#corporate[type=radio]:checked ~ .label1{
-  background-color: black;
-  color: white;
-}
-#personal[type=radio]:checked ~ .label2{
-  background-color: black;
-  color: white;
-}
-.input{
-  width: 70%;
-}
-.input,.textarea{
-  font-size:25px;
-  color: white;
-  background-color: black;
-  border: 10px rgba(0,0,0,0.7) solid;
-  border-radius: 4px;
-  opacity: 0.56;
-
-}
-.input:focus,.textarea:focus{
-  opacity: 1;
-}
-.textarea{
-  width:90%;
-}
-.copy-text{
-  font-family: $famiry;
-
-}
-.send{
-  background-color:transparent;
-  border:none;
-  margin-top: 40px;
-}
-.brTypeResposive{
-  display: none;
-}
-.errors{
-  list-style: none;
-  color: #0054a3;
-}
+  }
+  .send{
+    background-color:transparent;
+    border:none;
+    margin-top: 40px;
+    height: 100px;
+  }
+  .brTypeResposive{
+    display: none;
+  }
+  .errors{
+    list-style: none;
+    color: #0054a3;
+  }
