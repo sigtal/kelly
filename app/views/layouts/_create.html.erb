@@ -41,7 +41,7 @@
     <%= form.hidden_field :thumb, id: 'thumbSize-post' %>
     <div class="post-list">
       <% @tags.each do |tag| %>
-        <%= form.check_box :categories,{multiple: true}, "#{tag.category}#{tag.id}",nil  %>
+        <%= form.check_box :categories,{multiple: true}, "@#{tag.category}#{tag.id}",nil  %>
         <%= form.label :categories, tag.category %>
       <% end %>
     </div>

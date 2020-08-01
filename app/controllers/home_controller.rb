@@ -7,7 +7,7 @@ class HomeController < ApplicationController
     @illust = Illust.new
     @tag = Tag.new
     @tags = Tag.all
-    @illusts = Illust.page(params[:page]).per(cotents_part)
+    @illusts = Illust.all.order(id: :desc).page(params[:page]).per(cotents_part)
     respond_to do |format|
       format.html
       format.js { render 'shared/pagination'}
@@ -52,7 +52,7 @@ class HomeController < ApplicationController
       @illusts = Illust.page(params[:page]).per(cotents_part)
     else
       @tag = Tag.find_by(category: params[:category])
-      @illusts = Illust.where("categories LIKE ?", "%#{@tag.category}#{@tag.id}%").page(params[:page]).per(cotents_part)
+      @illusts = Illust.where("categories LIKE ?", "%@#{@tag.category}#{@tag.id}%").order(id: :desc).page(params[:page]).per(cotents_part)
     end
     @tags = Tag.all
     @select = Tag.find_by(category: params[:category])

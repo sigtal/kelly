@@ -7,6 +7,9 @@
     font-family: $famiry;
     padding: 30px;
     font-size: 15px;
+    span,a{
+      float:left;
+    }
     span{
       padding: 10px;
       margin: 10px;
@@ -29,6 +32,7 @@
       }
     }
   }
+
   h1{
     font-family: $famiry;
     padding: 0px 100px;
