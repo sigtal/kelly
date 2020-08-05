@@ -38,7 +38,7 @@ document.addEventListener('turbolinks:load', function(){
     mini.style.display = "block";
     mini.style.top = `${blockTop}px`;
     mini.style.left = `${blockLeft}px`;
-    dust.addEventListener("mousemove",function createMini(eventEnd){
+    window.addEventListener("mousemove",function createMini(eventEnd){
       var blockBottom = eventEnd.clientY;
       var blockRight = eventEnd.clientX;
       var height = blockBottom - blockTop;
@@ -51,8 +51,8 @@ document.addEventListener('turbolinks:load', function(){
         mini.style.width = `${height}px`;
       }
       canvasDraw(mini.style.left,mini.style.top,mini.style.width,mini.style.height);
-      dust.addEventListener("mouseup",function(){
-        dust.removeEventListener("mousemove",createMini);
+      window.addEventListener("mouseup",function(){
+        window.removeEventListener("mousemove",createMini);
         edit = true;
       });
     });

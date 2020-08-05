@@ -15,7 +15,6 @@ class HomeController < ApplicationController
   end
   def contact
     @contact = Contact.new(contact_params)
-
     respond_to do |format|
       if @contact.save
         ContactMailer.receive_request(@contact).deliver_now
@@ -29,8 +28,11 @@ class HomeController < ApplicationController
   end
   def createIllust
     @illust = Illust.new(illust_params)
-    @illust.save
-    redirect_to '/'
+    if @illust.save
+      redirect_to '/'
+    else
+      render ('home/top')
+    end
   end
   def createTag
     @tag = Tag.new(tag_params)
