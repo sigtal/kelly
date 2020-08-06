@@ -76,7 +76,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      z-index: 20;
+      z-index: 25;
       transform: translate(-50%, -50%);
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
@@ -102,6 +102,61 @@
         color:black;
       }
     }
+    .edit{
+      .fa-edit{
+        position: absolute;
+
+        z-index: 100;
+      }
+      .editContent{
+        display: none;
+        position: fixed;
+        top: 0;
+        z-index: 200;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(128,128,128,1);
+        .editIllustTag{
+          width:80%;
+          background: white;
+          margin:50px auto;
+          padding: 60px;
+          border-radius: 20px;
+          input{
+            padding: 8px 24px;
+            color: white;
+            background: black;
+            display: inline-block;
+            opacity: 0.56;
+            border-radius: 4px;
+            text-decoration: none;
+            &:hover{
+              opacity: 1;
+            }
+          }
+          .btn{
+            float: right;
+          }
+
+        }
+        .fa-times{
+          position: absolute;
+          top:70px;
+          right: 70px;
+          padding: 8px 24px;
+          color: white;
+          background: black;
+          display: inline-block;
+          opacity: 0.56;
+          border-radius: 4px;
+          text-decoration: none;
+          font-size: 10px;
+          &:hover{
+            opacity: 1;
+          }
+        }
+      }
+    }
     .share{
       font-size: 100px;
       position: absolute;
@@ -124,7 +179,17 @@
         color:black;
       }
     }
+    .backClose{
+      position:fixed;
+      z-index: 20;
+      top:0;
+      left:0;
+      width:100%;
+      height: 100%;
+      background-color: rgba(128,128,128,0.8);
+    }
   }
+
   .clear{
     clear:left;
   }

@@ -1,5 +1,5 @@
 <% set_meta_tags og:{ image: image_url(url_for(@illust.fullimage))}, twitter:{image: image_url(url_for(@illust.fullimage))}  %>
-<%= image_tag @illust.fullimage ,id: 'page-fullimage',class: 'showPageimage',alt: "illustrator kelly #{illust.name}"%>
+<%= image_tag @illust.fullimage ,id: 'page-fullimage',class: 'showPageimage',alt: "illustrator kelly #{@illust.name}"%>
 <%= link_to  '/',class: 'backButton' do %>
 <p>Click here for portfolio site<br>ポートフォリオサイトはこちら</p>
 <% end %>

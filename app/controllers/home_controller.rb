@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  before_action :admin_user, only: [:create,:delete]
+  before_action :admin_user, only: [:createIllust,:updateIllust,:createTag,:deleteIllust,:deleteTag]
   @cotents = 2
 
   def top
@@ -33,6 +33,12 @@ class HomeController < ApplicationController
     else
       render ('home/top')
     end
+  end
+  def updateIllust
+    @illust = Illust.find(params[:id])
+    @illust.update(categories: params[:categories])
+    @illust.save
+    redirect_to '/'
   end
   def createTag
     @tag = Tag.new(tag_params)

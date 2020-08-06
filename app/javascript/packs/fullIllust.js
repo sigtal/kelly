@@ -1,5 +1,4 @@
 document.addEventListener('turbolinks:load', function(){
-
   imageResize();
 
 });
@@ -16,7 +15,7 @@ document.addEventListener('turbolinks:load', function(){
         fullImage.style.display = 'none';
       });
     });
-    document.querySelectorAll('.fullimage').forEach(function(close){
+    document.querySelectorAll('.backClose').forEach(function(close){
       close.addEventListener('click',function(){
         fullImage.style.display = 'none';
       });

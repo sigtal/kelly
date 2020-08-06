@@ -19,7 +19,7 @@
           <div class="shareTitle">
             <p>Share to ...</p>
           </div>
-          <a class="s-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<%= request.url + "post/#{illust.id}"%>" rel="noopener"><span class="fab fa-facebook-square fa-fw"></span><p>Facebook</p></a>
+          <a class="s-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<%= request.url + "post/#{illust.id}"%>%2F&amp;src=sdkpreparse" rel="noopener"><span class="fab fa-facebook-square fa-fw"></span><p>Facebook</p></a>
           <br class="Vertical">
           <a class="s-twitter" target="_blank" href="https://twitter.com/share?url=<%= request.url + "post/#{illust.id}" %>" rel="noopener"><span class="fab fa-twitter-square fa-fw"></span><p>Twitter</p></a>
           <br class="Vertical">
@@ -32,8 +32,26 @@
               <span class="fas fa-trash-alt"></span>
             <% end %>
           </div>
-          <% end %>
+          <!-- 編集フォーム -->
+          <div class="edit">
+            <span class="fas fa-edit" id="editOpen"></span>
+            <div class="editContent">
+              <input type="hidden" id="originalCategory" value="<%= illust.categories %>">
+              <%= form_with url: "/updateillust/#{illust.id}" do |form| %>
+                <div id="editIllustTag" class="editIllustTag">
+                  <% @tags.each do |tag| %>
+                    <%= form.check_box :categories,{multiple: true}, "@#{tag.category}#{tag.id}",nil  %>
+                    <%= form.label :categories, tag.category %>
+                  <% end %>
+                  <%= form.submit class:'btn' %>
+                </div>
+              <% end %>
+              <span class="fas fa-times fa-fw" id="illustEditClose"></span>
+            </div>
+          </div>
+        <% end %>
         <%= image_tag illust.fullimage ,class: 'fullillust',id: 'fullimage' ,alt: "illustrator kelly #{illust.name}" %>
+        <div class="backClose"></div>
       </div>
     <% end %>
   <div class="clear" />
