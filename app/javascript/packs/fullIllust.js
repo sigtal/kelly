@@ -1,6 +1,5 @@
 document.addEventListener('turbolinks:load', function(){
   imageResize();
-
 });
 
  function imageResize (){
@@ -9,6 +8,17 @@ document.addEventListener('turbolinks:load', function(){
     var fullImage = illust.nextElementSibling;
     image.addEventListener('click', function(){
       fullImage.style.display = 'block';
+      var originImage = fullImage.querySelector('#fullimage')
+      console.log(originImage.naturalWidth,originImage.naturalHeight,originImage.width,originImage.height)
+      if(originImage.width > originImage.height){
+        if(originImage.height > originImage.naturalHeight){
+          originImage.style.height = `${originImage.naturalHeight}px`
+        }
+      }else if(originImage.width <= originImage.height){
+        if(originImage.width > originImage.naturalWidth){
+          originImage.style.width = `${originImage.naturalWidth}px`
+        }
+      }
     });
     document.querySelectorAll('.close').forEach(function(close){
       close.addEventListener('click',function(){
