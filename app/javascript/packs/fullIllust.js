@@ -9,7 +9,6 @@ document.addEventListener('turbolinks:load', function(){
     image.addEventListener('click', function(){
       fullImage.style.display = 'block';
       var originImage = fullImage.querySelector('#fullimage')
-      console.log(originImage.naturalWidth,originImage.naturalHeight,originImage.width,originImage.height)
       if(originImage.width > originImage.height){
         if(originImage.height > originImage.naturalHeight){
           originImage.style.height = `${originImage.naturalHeight}px`
