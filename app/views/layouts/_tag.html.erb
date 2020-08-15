@@ -1,14 +1,16 @@
 <div class="tag" id="tag">
   <% if @select %>
-    <%= link_to 'All', {action: 'top'} , remote: true %>
+    <%= link_to "All(#{Illust.all.count})", {action: 'top'} , remote: true %>
   <% else %>
-    <span>All</span>
+    <span>All(<%= Illust.all.count %>)</span>
   <% end %>
   <% @tags.each do |tag| %>
     <% if tag == @select %>
-      <span><%= tag.category %></span>
+      <span><%= tag.category + "(#{Illust.where("categories LIKE ?", "%@#{tag.category}#{tag.id}%").count})"%></span>
     <% else %>
-      <%= link_to tag.category, tag.category , remote: true %>
+      <%= link_to "/#{tag.category}", remote: true do %>
+        <%= tag.category + "(#{Illust.where("categories LIKE ?", "%@#{tag.category}#{tag.id}%").count})"%>
+      <% end %>
     <% end %>
 
   <% end %>
@@ -17,3 +19,4 @@
 <div class="clear">
 
 </div>
+<!-- Illust.where("categories LIKE ?", "%@#{@tag.category}#{@tag.id}%") -->
