@@ -9,28 +9,28 @@
     <span class="border4"></span>
       <p>All<br>(<%= Illust.all.count%>)</p>
   </a>
-  <a href="/<%= Tag.first.id%>" class="menu" data-remote=true id="select">
+  <a href="/1" class="menu" data-remote=true id="select">
     <span class="border1"></span>
     <span class="border2"></span>
     <span class="border3"></span>
     <span class="border4"></span>
     <p>Original<br>(<%= Illust.where("categories LIKE ?","%Original%").count%>)</p>
   </a>
-  <a href="/<%= Tag.second.id%>" class="menu" data-remote=true id="select">
+  <a href="/2" class="menu" data-remote=true id="select">
     <span class="border1"></span>
     <span class="border2"></span>
     <span class="border3"></span>
     <span class="border4"></span>
     <p>Fanart<br>(<%= Illust.where("categories LIKE ?","%Fanart%").count%>)</p>
   </a>
-  <a href="/<%= Tag.third.id%>" class="menu" data-remote=true id="select">
+  <a href="/3" class="menu" data-remote=true id="select">
     <span class="border1"></span>
     <span class="border2"></span>
     <span class="border3"></span>
     <span class="border4"></span>
     <p>Skeb<br>(<%= Illust.where("categories LIKE ?","%Skeb%").count%>)</p>
   </a>
-  <a href="/<%= Tag.fourth.id%>" class="menu" data-remote=true id="select">
+  <a href="/4" class="menu" data-remote=true id="select">
     <span class="border1"></span>
     <span class="border2"></span>
     <span class="border3"></span>
