@@ -88,6 +88,10 @@
     font-family: $famiry;
     padding-bottom: 200px;
     background-image: linear-gradient(rgba(255,255,255,0) 10%,rgba(255,255,255,0.3) 20%,rgba(255,255,255,0.7) 30%,rgba(255,255,255,10) 100% );
+    input[type=radio]{
+    position: absolute;
+    visibility: hidden;
+    }
   }
   .mail h1{
     font-family: $famiry;
@@ -103,6 +107,7 @@
   }
   .mail_wrapper{
     padding: 0 150px;
+    text-align: center;
   }
   .labelegal_entity{
     display: none;
@@ -111,12 +116,8 @@
     display: none;
   }
   .labelegal_entity,.individual{
-    padding-left:100px;
   }
-  input[type=radio]{
-  position: absolute;
-  visibility: hidden;
-  }
+
   .japanFont{
     font-family: $japanFont;
   }
@@ -132,8 +133,16 @@
     background-color: black;
     color: white;
   }
+  #contact_title_ご依頼[type=radio]:checked ~ #checkBox1{
+    background-color: black;
+    color: white;
+  }
+  #contact_title_お問い合わせ[type=radio]:checked ~ #checkBox2{
+    background-color: black;
+    color: white;
+  }
   .input{
-    width: 70%;
+    width: 30%;
   }
   .input,.textarea{
     font-size:25px;
@@ -148,12 +157,14 @@
     opacity: 1;
   }
   .textarea{
-    width:90%;
+    width:60%;
+    height: 152px;
   }
   .copy-text{
     font-family: $famiry;
 
   }
+
   .send{
     background-color:transparent;
     border:none;
@@ -166,4 +177,7 @@
   .errors{
     list-style: none;
     color: #0054a3;
+  }
+  .titleInput{
+    width:150px;
   }

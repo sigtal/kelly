@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
@@ -8,10 +10,10 @@ Rails.application.routes.draw do
   post '/updateillust/:id', to: 'home#updateIllust'
   post '/createtag', to: 'home#createTag'
   delete '/tag/:id', to: 'home#deleteTag'
-  get '/:category', to:'home#selectTag'
+  get '/test', to: 'home#test'
   delete '/illust/:id', to: 'home#deleteIllust'
   get 'post/:id', to: 'post#show'
   root 'home#top'
-
+  get '/:id', to:'home#top'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

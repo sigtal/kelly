@@ -1,3 +1,5 @@
+@import "variables";
+
 .topimage{
   width: 100%;
   height: 600px;
@@ -19,7 +21,7 @@
       width: 20%;
       text-align:center;
       cursor:default;
-      font-family: 'Monoton', cursive;
+      font-family: $backgroundFont;
       &:nth-child(1){
         background-image: image-url('star.jpg');
         background-size:338px 600px;
@@ -51,7 +53,7 @@
 
 .background-image{
   width: 60%;
-  float:right;
+  // float:right;
   position:fixed;
   bottom:0;
   right:0;

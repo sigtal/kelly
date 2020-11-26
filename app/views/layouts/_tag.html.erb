@@ -1,22 +1,104 @@
+
+
+
 <div class="tag" id="tag">
-  <% if @select %>
-    <%= link_to "All(#{Illust.all.count})", {action: 'top'} , remote: true %>
-  <% else %>
-    <span>All(<%= Illust.all.count %>)</span>
-  <% end %>
-  <% @tags.each do |tag| %>
-    <% if tag == @select %>
-      <span><%= tag.category + "(#{Illust.where("categories LIKE ?", "%@#{tag.category}#{tag.id}%").count})"%></span>
-    <% else %>
-      <%= link_to "/#{tag.category}", remote: true do %>
-        <%= tag.category + "(#{Illust.where("categories LIKE ?", "%@#{tag.category}#{tag.id}%").count})"%>
-      <% end %>
-    <% end %>
+  <a href="/" class="menu select" data-remote=true id="select">
+    <span class="border1"></span>
+    <span class="border2"></span>
+    <span class="border3"></span>
+    <span class="border4"></span>
+      <p>All<br>(<%= Illust.all.count%>)</p>
+  </a>
+  <a href="/<%= Tag.first.id%>" class="menu" data-remote=true id="select">
+    <span class="border1"></span>
+    <span class="border2"></span>
+    <span class="border3"></span>
+    <span class="border4"></span>
+    <p>Original<br>(<%= Illust.where("categories LIKE ?","%Original%").count%>)</p>
+  </a>
+  <a href="/<%= Tag.second.id%>" class="menu" data-remote=true id="select">
+    <span class="border1"></span>
+    <span class="border2"></span>
+    <span class="border3"></span>
+    <span class="border4"></span>
+    <p>Fanart<br>(<%= Illust.where("categories LIKE ?","%Fanart%").count%>)</p>
+  </a>
+  <a href="/<%= Tag.third.id%>" class="menu" data-remote=true id="select">
+    <span class="border1"></span>
+    <span class="border2"></span>
+    <span class="border3"></span>
+    <span class="border4"></span>
+    <p>Skeb<br>(<%= Illust.where("categories LIKE ?","%Skeb%").count%>)</p>
+  </a>
+  <a href="/<%= Tag.fourth.id%>" class="menu" data-remote=true id="select">
+    <span class="border1"></span>
+    <span class="border2"></span>
+    <span class="border3"></span>
+    <span class="border4"></span>
+    <p>Works<br>(<%= Illust.where("categories LIKE ?","%Works%").count%>)</p>
+  </a>
 
-  <% end %>
+    <!-- <a class="menu">
+      <span class="border1"></span>
+      <span class="border2"></span>
+      <span class="border3"></span>
+      <span class="border4"></span>
+        <p>All</p>
+    </a>
+    <input type="radio" name="tag" value="original" id="original">
+      <label for="original" class="menu label1">
+        <span class="border1"></span>
+        <span class="border2"></span>
+        <span class="border3"></span>
+        <span class="border4"></span>
+          <p>Original</p>
+      </label>
+    <input type="radio" name="tag" value="fanart" id="fanart">
+      <label for="fanart" class="menu label2">
+        <span class="border1"></span>
+        <span class="border2"></span>
+        <span class="border3"></span>
+        <span class="border4"></span>
+          <p>Fanart</p>
+      </label>
+      <label for="fanart" class="menu label2">
+        <span class="border1"></span>
+        <span class="border2"></span>
+        <span class="border3"></span>
+        <span class="border4"></span>
+          <p>Skeb</p>
+      </label>
+      <label for="fanart" class="menu label2">
+        <span class="border1"></span>
+        <span class="border2"></span>
+        <span class="border3"></span>
+        <span class="border4"></span>
+          <p>Works</p>
+      </label> -->
+
+
+
 
 </div>
-<div class="clear">
-
-</div>
+<div class="clear"></div>
 <!-- Illust.where("categories LIKE ?", "%@#{@tag.category}#{@tag.id}%") -->
+<!-- (#{Illust.where("categories LIKE ?","%Original%").count} -->
+<script type="text/javascript">
+  var selects = document.querySelectorAll("#select")
+  selects.forEach(function(select){
+    select.addEventListener("click",function(){
+      // var qq = document.querySelector(".select")
+      // qq.classList.remove("select")
+      selects.forEach(function(test){
+        var bool = test.classList.contains("select")
+        if(bool){
+          test.classList.remove("select")
+        }
+      })
+      select.classList.add("select")
+
+
+    })
+
+  })
+</script>

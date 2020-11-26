@@ -32,28 +32,49 @@
 
       </div>
       <%= form_with model: @contact,url: { action: "contact" } do |form| %>
+        <p>Your Name
+          <span class="japanFont">
+            (お名前・会社名)
+          </span>
+        </p>
+        <%= form.text_field :name, class: :input,id: :input3,:placeholder => "kelly" %>
         <p>Your Email Address
           <span class="japanFont">
             （連絡先メールアドレス）
           </span>
         </p>
         <%= form.text_field :email, class: :input, id: :input1, :placeholder => "kelly@example.com" %>
-        <p>Budget
+        <p>Title
           <span class="japanFont">
-            （予算）
+            （件名）
           </span>
         </p>
-        <%= form.text_field :budget, class: :input, id: :input2 %>
+        <%= form.radio_button :title,"ご依頼"%>
+        <label for="contact_title_ご依頼" class="menu titleInput" id="checkBox1">
+          Request
+          <span class="japanFont">
+            （依頼）
+          </span>
+        </label>
+        <%= form.radio_button :title,"お問い合わせ" %>
+        <label for="contact_title_お問い合わせ" class="menu titleInput" id="checkBox2">
+          Other<span class="japanFont">（その他）</span>
+        </label>
         <br class="brTypeResposive">
-        <p class="yen">
+        <!-- <p class="yen">
           Japanese Yen
-        </p>
+        </p> -->
         <p>Content
           <span class="japanFont">
             （依頼内容）
           </span>
         </p>
-        <%= form.text_area :content, class: :textarea, id: :textarea1,onchange: "textAreaHeightSet(this)",oninput: "textAreaHeightSet(this)"  %>
+        <%= form.text_area :content, class: :textarea, id: :textarea1,:placeholder => "【記入例】
+〈内容〉
+〈予算〉
+〈納期〉
+その他ご不明点ご質問等がございましたら
+お気軽にお問い合わせください。",onchange: "textAreaHeightSet(this)",oninput: "textAreaHeightSet(this)"  %>
         <br>
         <button type="submit" class="menu send">
           <span class="border1"></span>

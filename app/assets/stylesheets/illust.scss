@@ -3,52 +3,21 @@
 .illust{
   width:100%;
   margin-top: 250px;
-  .tag{
-    font-family: $famiry;
-    padding: 30px;
-    font-size: 15px;
-    span,a{
-      float:left;
-    }
-    span{
-      padding: 10px;
-      margin: 10px;
-      color: white;
-      background: black;
-      text-decoration: none;
-      opacity: 1;
-      border-radius: 4px;
-    }
-    a{
-      padding: 10px;
-      margin: 10px;
-      color: white;
-      background: black;
-      text-decoration: none;
-      opacity: 0.56;
-      border-radius: 4px;
-      &:hover{
-        opacity: 1;
-      }
-    }
-  }
-
   h1{
     font-family: $famiry;
     padding: 0px 100px;
     opacity: 0.49;
   }
   .illust-container{
-    width:20%;
+    width:25%;
     float:left;
-    margin: 0px auto;
     text-align: center;
     .illust-content{
       height:300px;
       .content{
         border: 10px rgba(0,0,0,0.7) solid;
-        border-radius: 20px;
-        margin: 0 20px;
+        margin: 0 auto;
+        // border-radius: 20px;
         width: 100%;
         height: 100%;
         overflow: hidden;
@@ -59,6 +28,10 @@
         canvas{
           width:100%;
           height:100%;
+        }
+        transition: border .3s;
+        &:hover{
+          border: 10px rgba(0,0,0,0) solid;
         }
       }
     }

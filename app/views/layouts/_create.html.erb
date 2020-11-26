@@ -41,7 +41,7 @@
     <%= form.hidden_field :thumb, id: 'thumbSize-post' %>
     <div class="post-list">
       <% @tags.each do |tag| %>
-        <%= form.check_box :categories,{multiple: true}, "@#{tag.category}#{tag.id}",nil  %>
+        <%= form.check_box :categories,{multiple: true}, "@#{tag.category}",nil  %>
         <%= form.label :categories, tag.category %>
       <% end %>
     </div>
@@ -49,6 +49,10 @@
   <% end %>
   <%= form_with model: @tag,url: { action: "createTag" },class:'createTag' do |form| %>
     <%= form.text_field :category,class: 'newCategory' %>
+    <%= form.radio_button :original, true %>
+    <%= form.label :original, "original" %>
+    <%= form.radio_button :original, false %>
+    <%= form.label :original, "fanart" %>
     <%= form.submit class:'btn' %>
   <% end %>
   <button type="button" name="button" class="btn" id="tagDeleteButto">Tag Delete</button>

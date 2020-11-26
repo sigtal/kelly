@@ -1,13 +1,23 @@
 class HomeController < ApplicationController
   before_action :admin_user, only: [:createIllust,:updateIllust,:createTag,:deleteIllust,:deleteTag]
   @cotents = 2
-
+  @test = 0
+  def test
+    binding.pry
+  end
   def top
     @contact = Contact.new
     @illust = Illust.new
     @tag = Tag.new
     @tags = Tag.all
-    @illusts = Illust.all.order(id: :desc).page(params[:page]).per(cotents_part)
+    if params[:id]
+      @selectTag = Tag.find_by(id: params[:id])
+      @illusts = Illust.where("categories LIKE ?", "%#{@selectTag.category}%").order(id: :desc).page(params[:page]).per(cotents_part)
+      @select = @selectTag.category
+    else
+      @illusts = Illust.all.order(id: :desc).page(params[:page]).per(cotents_part)
+      @select = "All"
+    end
     respond_to do |format|
       format.html
       format.js { render 'shared/pagination'}
@@ -17,7 +27,7 @@ class HomeController < ApplicationController
     @contact = Contact.new(contact_params)
     respond_to do |format|
       if @contact.save
-        ContactMailer.receive_request(@contact).deliver_now
+        # ContactMailer.receive_request(@contact).deliver_now
         format.html
         format.js { render 'shared/success'}
       else
@@ -56,11 +66,12 @@ class HomeController < ApplicationController
     redirect_to '/'
   end
   def selectTag
-    if params[:categories] == "all"
+    @selectTag = Tag.find_by(id: params[:id])
+    if @selectTag.category == "all"
       @illusts = Illust.page(params[:page]).per(cotents_part)
     else
-      @tag = Tag.find_by(category: params[:category])
-      @illusts = Illust.where("categories LIKE ?", "%@#{@tag.category}#{@tag.id}%").order(id: :desc).page(params[:page]).per(cotents_part)
+      @illusts = Illust.first
+      # where("categories LIKE ?", "%#{@selectTag.category}%").order(id: :desc).page(params[:page]).per(cotents_part)
     end
     @tags = Tag.all
     @select = Tag.find_by(category: params[:category])
@@ -71,13 +82,13 @@ class HomeController < ApplicationController
   end
   private
     def contact_params
-      params.require(:contact).permit(:email,:budget,:content)
+      params.require(:contact).permit(:email,:title,:content,:name)
     end
     def illust_params
       params.require(:illust).permit(:name,:fullimage,:thumb, categories: [])
     end
     def tag_params
-      params.require(:tag).permit(:category)
+      params.require(:tag).permit(:category,:original)
     end
     def cotents_part
       mobile = request.env["HTTP_USER_AGENT"]
