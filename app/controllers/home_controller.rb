@@ -27,7 +27,7 @@ class HomeController < ApplicationController
     @contact = Contact.new(contact_params)
     respond_to do |format|
       if @contact.save
-        # ContactMailer.receive_request(@contact).deliver_now
+        ContactMailer.receive_request(@contact).deliver_now
         format.html
         format.js { render 'shared/success'}
       else
