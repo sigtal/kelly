@@ -40,7 +40,7 @@
               <%= form_with url: "/updateillust/#{illust.id}" do |form| %>
                 <div id="editIllustTag" class="editIllustTag">
                   <% @tags.each do |tag| %>
-                    <%= form.check_box :categories,{multiple: true}, "@#{tag.category}#{tag.id}",nil  %>
+                    <%= form.check_box :categories,{multiple: true, checked: illust.categories}, "@#{tag.category}",nil  %>
                     <%= form.label :categories, tag.category %>
                   <% end %>
                   <%= form.submit class:'btn' %>
