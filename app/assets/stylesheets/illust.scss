@@ -1,41 +1,45 @@
 @import "variables";
 
 .illust{
-  width:100%;
-  margin-top: 250px;
+  margin:0 auto;
   h1{
     font-family: $famiry;
     padding: 0px 100px;
     opacity: 0.49;
   }
-  .illust-container{
-    width:25%;
-    float:left;
-    text-align: center;
-    .illust-content{
-      height:300px;
-      .content{
-        border: 10px rgba(0,0,0,0.7) solid;
-        margin: 0 auto;
-        // border-radius: 20px;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        width: 200px;
-        height: 200px;
-        position: relative;
-        cursor:pointer;
-        canvas{
-          width:100%;
-          height:100%;
-        }
-        transition: border .3s;
-        &:hover{
-          border: 10px rgba(0,0,0,0) solid;
+  #illust-container{
+    width: 80%;
+    margin: 0 auto;
+    .illust-container{
+      width:25%;
+      float:left;
+      text-align: center;
+      .illust-content{
+        height:300px;
+        .content{
+          border: 10px rgba(0,0,0,0.7) solid;
+          margin: 0 auto;
+          // border-radius: 20px;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          width: 200px;
+          height: 200px;
+          position: relative;
+          cursor:pointer;
+          canvas{
+            width:100%;
+            height:100%;
+          }
+          transition: border .3s;
+          &:hover{
+            border: 10px rgba(0,0,0,0) solid;
+          }
         }
       }
     }
   }
+
   .fullimage{
     display:none;
     position:fixed;
