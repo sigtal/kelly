@@ -1,6 +1,7 @@
 <!-- イラスト -->
 
 <div id="illust-container">
+  <div class="illust-all-width">
     <% @illusts.each do |illust| %>
       <div class="illust-container">
         <div class="illust-content">
@@ -55,8 +56,9 @@
         <div class="backClose"></div>
       </div>
     <% end %>
-  <div class="clear" />
-  <div class="paginate">
-    <%= paginate @illusts, :remote => true %>
+    <div class="clear" />
+    <div class="paginate">
+      <%= paginate @illusts, :remote => true %>
+    </div>
   </div>
 </div>
